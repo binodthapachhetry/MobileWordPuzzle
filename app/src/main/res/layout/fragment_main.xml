@@ -36,6 +36,8 @@
 
     android:padding="@dimen/menu_padding"
 
+    android:text="@string/about_title"
+
     tools:context="edu.neu.madcourse.binodthapachhetry.MainActivityFragment">
 
 
@@ -46,8 +48,6 @@
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="@dimen/menu_space"
-
-        android:text="@string/about_title"
 
         android:textAppearance="?android:textAppearanceLarge"
 

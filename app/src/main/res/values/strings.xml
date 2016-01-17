@@ -15,8 +15,12 @@
 
     <string name="ok_label">OK</string>
 <string name="quit_label">Quit</string>
+    <string name="yes_label">YES</string>
+    <string name="no_label">NO</string>
 
 <string name="about_title">Binod Thapa Chhetry</string>
+
+    <string name="quit_text">Are you sure you want to quit the application?</string>
 
 <string name="about_text">\
 

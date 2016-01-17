@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Intent;
 import android.widget.ArrayAdapter;
 
 import android.widget.ListView;
@@ -33,6 +34,7 @@ public class MainActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         // Handle buttons here
+        // About button
         View aboutButton = rootView.findViewById(R.id.about_button);
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +55,40 @@ public class MainActivityFragment extends Fragment {
                 mDialog = builder.show();
             }
         });
+
+        View quitButton = rootView.findViewById(R.id.quit_button);
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder =
+                        new AlertDialog.Builder(getActivity());
+//                builder.setTitle(R.string.about_title);
+                builder.setMessage(R.string.quit_text);
+//                builder.setCancelable(true);
+                builder.setPositiveButton(R.string.yes_label,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface,
+                                                int i) {
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                System.exit(1);
+                            }
+                        });
+
+                builder.setNegativeButton(R.string.no_label,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface,
+                                                int i) {
+                                // nothing
+                            }
+                        });
+                mDialog = builder.show();
+            }
+        });
+
+
+
 
 
 
