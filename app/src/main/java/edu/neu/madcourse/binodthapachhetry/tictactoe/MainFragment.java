@@ -17,7 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import edu.neu.binodthapachhetry.R;
+
+
+import edu.neu.madcourse.binodthapachhetry.R;
 
 public class MainFragment extends Fragment {
 
@@ -27,7 +29,7 @@ public class MainFragment extends Fragment {
    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                             Bundle savedInstanceState) {
       View rootView =
-            inflater.inflate(R.layout.fragment_main, container, false);
+            inflater.inflate(R.layout.tictactoe6_fragment_main, container, false);
       // Handle buttons here...
       View newButton = rootView.findViewById(R.id.new_button);
       View continueButton = rootView.findViewById(R.id.continue_button);
@@ -51,7 +53,7 @@ public class MainFragment extends Fragment {
          @Override
          public void onClick(View view) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage(R.string.about_text);
+            builder.setMessage(R.string.tictactoe6_about_text);
             builder.setCancelable(false);
             builder.setPositiveButton(R.string.ok_label,
                   new DialogInterface.OnClickListener() {

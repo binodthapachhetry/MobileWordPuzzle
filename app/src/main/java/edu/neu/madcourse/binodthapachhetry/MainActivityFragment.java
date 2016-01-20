@@ -21,8 +21,6 @@ import java.util.Arrays;
  */
 public class MainActivityFragment extends Fragment {
 
-//    private ArrayAdapter<String> mItemAdapter;
-
     private AlertDialog mDialog;
 
     public MainActivityFragment() {
@@ -33,38 +31,37 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        // Handle buttons here
+
+        // Tic Tac Toe Button
+        View tttButton = rootView.findViewById(R.id.tictactoe_button);
+        tttButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+
         // About button
         View aboutButton = rootView.findViewById(R.id.about_button);
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder =
-                        new AlertDialog.Builder(getActivity());
-                builder.setTitle(R.string.about_title);
-                builder.setMessage(R.string.about_text);
-                builder.setCancelable(false);
-                builder.setPositiveButton(R.string.ok_label,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface,
-                                                int i) {
-                                // nothing
-                            }
-                        });
-                mDialog = builder.show();
+                Intent j = new Intent(getActivity(), AboutActivity.class);
+                startActivity(j);
             }
         });
 
+        // Quit button
         View quitButton = rootView.findViewById(R.id.quit_button);
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder =
                         new AlertDialog.Builder(getActivity());
-//                builder.setTitle(R.string.about_title);
                 builder.setMessage(R.string.quit_text);
-//                builder.setCancelable(true);
+
                 builder.setPositiveButton(R.string.yes_label,
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -86,26 +83,6 @@ public class MainActivityFragment extends Fragment {
                 mDialog = builder.show();
             }
         });
-
-
-
-
-
-
-        // List of items in the main menu
-//        String[] itemArray = {"About","GenerateError","TicTacToe","Quit"};
-//        ArrayList<String> allItems = new ArrayList<String>(Arrays.asList(itemArray));
-//
-//        // Creating an ArrayAdapter
-//        mItemAdapter =
-//                new ArrayAdapter<String>(
-//                        getActivity(),
-//                        R.layout.list_item,
-//                        R.id.list_item_textview,
-//                        allItems);
-//        // Get a reference to the ListView, and attach this adapter
-//        ListView listView = (ListView) rootView.findViewById(R.id.listview_item);
-//        listView.setAdapter(mItemAdapter);
 
         return rootView;
     }

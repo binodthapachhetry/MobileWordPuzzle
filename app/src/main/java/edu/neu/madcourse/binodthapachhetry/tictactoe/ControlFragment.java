@@ -14,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import edu.neu.binodthapachhetry.R;
+import edu.neu.madcourse.binodthapachhetry.R;
 
 public class ControlFragment extends Fragment {
 
@@ -22,7 +22,7 @@ public class ControlFragment extends Fragment {
    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                             Bundle savedInstanceState) {
       View rootView =
-            inflater.inflate(R.layout.fragment_control, container, false);
+            inflater.inflate(R.layout.tictactoe6_fragment_control, container, false);
       View main = rootView.findViewById(R.id.button_main);
       View restart = rootView.findViewById(R.id.button_restart);
 

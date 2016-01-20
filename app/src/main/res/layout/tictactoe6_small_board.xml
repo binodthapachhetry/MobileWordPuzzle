@@ -12,9 +12,9 @@
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"
    android:background="@drawable/tile_background"
-   android:elevation="@dimen/elevation_low"
-   android:padding="@dimen/small_board_padding"
-   tools:context="edu.neu.binodthapachhetry.GameActivity">
+   android:elevation="@dimen/tictactoe6_elevation_low"
+   android:padding="@dimen/tictactoe6_small_board_padding"
+   tools:context="edu.neu.madcourse.binodthapachhetry.tictactoe.GameActivity">
 
    <ImageButton android:id="@+id/small1" style="@style/TileButton"
                 android:layout_column="0" android:layout_row="0"/>

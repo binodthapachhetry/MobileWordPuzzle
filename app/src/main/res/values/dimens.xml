@@ -14,9 +14,35 @@
 
     <dimen name="menu_space">10dp</dimen>
 
-    <dimen name="menu_text_size">32sp</dimen>
+    <dimen name="menu_text_size">16sp</dimen>
 
     <dimen name="menu_button_margin">4dp</dimen>
 
     <dimen name="menu_button_padding">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="tictactoe6_activity_horizontal_margin">8dp</dimen>
+    <dimen name="tictactoe6_activity_vertical_margin">8dp</dimen>
+    <dimen name="tictactoe6_tile_size">30dp</dimen>
+    <dimen name="tictactoe6_tile_margin">0dp</dimen>
+    <dimen name="tictactoe6_tile_padding">3dp</dimen>
+    <dimen name="tictactoe6_control_padding">20dp</dimen>
+    <dimen name="tictactoe6_small_board_padding">2dp</dimen>
+    <dimen name="tictactoe6_small_board_margin">2dp</dimen>
+    <dimen name="tictactoe6_elevation_low">4dp</dimen>
+    <dimen name="tictactoe6_elevation_high">8dp</dimen>
+    <dimen name="thinking_progress_size">50dp</dimen>
+    <dimen name="tictactoe6_stroke_width">1dp</dimen>
+    <dimen name="tictactoe6_corner_radius">4dp</dimen>
+
+    <dimen name="tictactoe6_menu_padding">10dp</dimen>
+    <dimen name="tictactoe6_menu_space">10dp</dimen>
+    <dimen name="tictactoe6_menu_text_size">32sp</dimen>
+    <dimen name="tictactoe6_menu_button_margin">4dp</dimen>
+    <dimen name="tictactoe6_menu_button_padding">10dp</dimen>
+
+
 </resources>

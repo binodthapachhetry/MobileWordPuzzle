@@ -18,7 +18,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
-import edu.neu.binodthapachhetry.R;
+import edu.neu.madcourse.binodthapachhetry.R;
 
 public class GameActivity extends Activity {
    public static final String KEY_RESTORE = "key_restore";
@@ -30,7 +30,7 @@ public class GameActivity extends Activity {
    @Override
    protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_game);
+      setContentView(R.layout.tictactoe6_activity_game);
       mGameFragment = (GameFragment) getFragmentManager()
             .findFragmentById(R.id.fragment_game);
       boolean restore = getIntent().getBooleanExtra(KEY_RESTORE, false);
@@ -55,7 +55,7 @@ public class GameActivity extends Activity {
          mMediaPlayer.reset();
          mMediaPlayer.release();
       }
-      builder.setMessage(getString(R.string.declare_winner, winner));
+      builder.setMessage(getString(R.string.tictactoe6_declare_winner, winner));
       builder.setCancelable(false);
       builder.setPositiveButton(R.string.ok_label,
             new DialogInterface.OnClickListener() {
@@ -95,9 +95,9 @@ public class GameActivity extends Activity {
    @Override
    protected void onResume() {
       super.onResume();
-//      mMediaPlayer = MediaPlayer.create(this, R.raw.frankum_loop001e);
-//      mMediaPlayer.setLooping(true);
-//      mMediaPlayer.start();
+      mMediaPlayer = MediaPlayer.create(this, R.raw.frankum_loop001e);
+      mMediaPlayer.setLooping(true);
+      mMediaPlayer.start();
    }
 
    @Override

@@ -19,10 +19,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import edu.neu.binodthapachhetry.R;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import edu.neu.madcourse.binodthapachhetry.R;
 
 public class GameFragment extends Fragment {
    static private int mLargeIds[] = {R.id.large1, R.id.large2, R.id.large3,
@@ -73,7 +73,7 @@ public class GameFragment extends Fragment {
    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                             Bundle savedInstanceState) {
       View rootView =
-            inflater.inflate(R.layout.large_board, container, false);
+            inflater.inflate(R.layout.tictactoe6_large_board, container, false);
       initViews(rootView);
       updateAllTiles();
       return rootView;

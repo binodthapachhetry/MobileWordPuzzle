@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import edu.neu.binodthapachhetry.R;
+import edu.neu.madcourse.binodthapachhetry.R;
 
 /**
  * This custom view draws a background image that scrolls indefinitely.

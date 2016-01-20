@@ -28,19 +28,19 @@
 
       <fragment
          android:id="@+id/fragment_game"
-         class="edu.neu.binodthapachhetry.GameFragment"
+         class="edu.neu.madcourse.binodthapachhetry.tictactoe.GameFragment"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         tools:layout="@layout/fragment_game"/>
+         tools:layout="@layout/tictactoe6_fragment_game"/>
 
       <fragment
          android:id="@+id/fragment_game_controls"
-         class="edu.neu.binodthapachhetry.ControlFragment"
+         class="edu.neu.madcourse.binodthapachhetry.tictactoe.ControlFragment"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         tools:layout="@layout/fragment_control"/>
+         tools:layout="@layout/tictactoe6_fragment_control"/>
    </LinearLayout>
 
-   <include layout="@layout/thinking"/>
+   <include layout="@layout/tictactoe6_thinking"/>
 
 </FrameLayout>
