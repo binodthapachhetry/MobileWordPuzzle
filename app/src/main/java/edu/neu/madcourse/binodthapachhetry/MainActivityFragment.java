@@ -32,6 +32,16 @@ public class MainActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
 
+        // Generate Erro Button
+        View errButton = rootView.findViewById(R.id.generate_error_button);
+        errButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                throw new RuntimeException("Crash!");
+            }
+        });
+
+
         // Tic Tac Toe Button
         View tttButton = rootView.findViewById(R.id.tictactoe_button);
         tttButton.setOnClickListener(new View.OnClickListener() {

@@ -12,25 +12,25 @@
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"
    android:background="@drawable/tictactoe6_menu_background"
-   android:elevation="@dimen/elevation_high"
+   android:elevation="@dimen/tictactoe6_elevation_high"
    android:orientation="vertical"
-   android:padding="@dimen/menu_padding"
+   android:padding="@dimen/tictactoe6_menu_padding"
    tools:context=".TicTacToeActivity">
 
    <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="@dimen/menu_space"
+      android:layout_marginBottom="@dimen/tictactoe6_menu_space"
       android:text="@string/tictactoe6_long_app_name"
       android:textAppearance="?android:textAppearanceLarge"
-      android:textSize="@dimen/menu_text_size"/>
+      android:textSize="@dimen/tictactoe6_menu_text_size"/>
 
    <Button
       android:id="@+id/continue_button"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_margin="@dimen/menu_button_margin"
-      android:padding="@dimen/menu_button_padding"
+      android:layout_margin="@dimen/tictactoe6_menu_button_margin"
+      android:padding="@dimen/tictactoe6_menu_button_padding"
       android:text="@string/tictactoe6_continue_label"/>
 
    <Button
@@ -38,8 +38,8 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
-      android:layout_margin="@dimen/menu_button_margin"
-      android:padding="@dimen/menu_button_padding"
+      android:layout_margin="@dimen/tictactoe6_menu_button_margin"
+      android:padding="@dimen/tictactoe6_menu_button_padding"
       android:text="@string/tictactoe6_new_game_label"/>
 
    <Button
@@ -47,7 +47,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
-      android:layout_margin="@dimen/menu_button_margin"
-      android:padding="@dimen/menu_button_padding"
-      android:text="@string/about_label"/>
+      android:layout_margin="@dimen/tictactoe6_menu_button_margin"
+      android:padding="@dimen/tictactoe6_menu_button_padding"
+      android:text="@string/tictactoe6_about_label"/>
 </LinearLayout>

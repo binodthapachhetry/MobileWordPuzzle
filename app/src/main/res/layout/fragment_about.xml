@@ -39,13 +39,13 @@ tools:context="edu.neu.madcourse.binodthapachhetry.MainActivityFragment">
 
 
     <ImageView android:id="@+id/myImage"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:src="@mipmap/ic_launcher"/>
+        android:scaleType="fitCenter"
+        android:src="@drawable/mypic"/>
 
     <TextView
-        android:id="@+id/android_id"
+        android:id="@+id/device_id"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"

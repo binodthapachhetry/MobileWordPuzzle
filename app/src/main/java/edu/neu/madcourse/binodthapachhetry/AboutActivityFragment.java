@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.provider.Settings.Secure;
 import android.widget.TextView;
+import android.telephony.TelephonyManager;
+import android.content.Context;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class AboutActivityFragment extends Fragment {
+
+//    private TelephonyManager telephonyManager;
+//    private String deviceID;
 
     public AboutActivityFragment() {
     }
@@ -22,11 +25,19 @@ public class AboutActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View aboutView = inflater.inflate(R.layout.fragment_about, container, false);
 
-        String android_id = Secure.getString(getContext().getContentResolver(), Secure.ANDROID_ID);
-        /* Get the widget with id name which is defined in the xml of the row */
-        TextView name = (TextView) aboutView.findViewById(R.id.android_id);
-        name.setText(android_id);
+        String deviceID = getUniqueID();
+
+        TextView name = (TextView) aboutView.findViewById(R.id.device_id);
+        name.setText(deviceID);
 
         return aboutView;
+    }
+
+    public String getUniqueID(){
+        String myAndroidDeviceId = "0000000000000000";
+        TelephonyManager mTelephony = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+        if (!mTelephony.getDeviceId().contains(myAndroidDeviceId)){
+            myAndroidDeviceId = mTelephony.getDeviceId();}
+        return myAndroidDeviceId;
     }
 }
