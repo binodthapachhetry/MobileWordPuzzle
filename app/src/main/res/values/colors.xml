@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="field_color">#b5cee0</color>
+    <color name="border_color">#7f7f7f</color>
+
+    <color name="tictactoe6_field_color">#b5cee0</color>
+    <color name="tictactoe6_border_color">#7f7f7f</color>
+    <color name="tictactoe6_dark_border_color">#4f4f4f</color>
+    <color name="tictactoe6_available_color">#7fbf7f</color>
+    <color name="tictactoe6_blue_color">#7f7fff</color>
+    <color name="tictactoe6_gray_color">#bfbfbf</color>
+    <color name="tictactoe6_purple_color">#7f007f</color>
+    <color name="tictactoe6_red_color">#ff7f7f</color>
+    <color name="tictactoe6_thinking_background_color">#cfdfdfdf</color>
 </resources>

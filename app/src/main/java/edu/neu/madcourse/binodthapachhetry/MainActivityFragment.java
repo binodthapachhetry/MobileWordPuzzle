@@ -1,13 +1,18 @@
 package edu.neu.madcourse.binodthapachhetry;
 
-import android.support.v4.app.Fragment;
+
+import android.app.AlertDialog;
+import android.app.Fragment;
+//import android.support.v4.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Intent;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
+import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,7 +21,7 @@ import java.util.Arrays;
  */
 public class MainActivityFragment extends Fragment {
 
-    private ArrayAdapter<String> mItemAdapter;
+    private AlertDialog mDialog;
 
     public MainActivityFragment() {
     }
@@ -26,21 +31,78 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        // List of items in the main menu
-        String[] itemArray = {"About","GenerateError","TicTacToe","Quit"};
-        ArrayList<String> allItems = new ArrayList<String>(Arrays.asList(itemArray));
 
-        // Creating an ArrayAdapter
-        mItemAdapter =
-                new ArrayAdapter<String>(
-                        getActivity(),
-                        R.layout.list_item,
-                        R.id.list_item_textview,
-                        allItems);
-        // Get a reference to the ListView, and attach this adapter
-        ListView listView = (ListView) rootView.findViewById(R.id.listview_item);
-        listView.setAdapter(mItemAdapter);
+        // Generate Erro Button
+        View errButton = rootView.findViewById(R.id.generate_error_button);
+        errButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                throw new RuntimeException("Crash!");
+            }
+        });
+
+
+        // Tic Tac Toe Button
+        View tttButton = rootView.findViewById(R.id.tictactoe_button);
+        tttButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity.class);
+                getActivity().startActivity(i);
+            }
+        });
+
+
+        // About button
+        View aboutButton = rootView.findViewById(R.id.about_button);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent j = new Intent(getActivity(), AboutActivity.class);
+                startActivity(j);
+            }
+        });
+
+        // Quit button
+        View quitButton = rootView.findViewById(R.id.quit_button);
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder =
+                        new AlertDialog.Builder(getActivity());
+                builder.setMessage(R.string.quit_text);
+
+                builder.setPositiveButton(R.string.yes_label,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface,
+                                                int i) {
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                System.exit(1);
+                            }
+                        });
+
+                builder.setNegativeButton(R.string.no_label,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface,
+                                                int i) {
+                                // nothing
+                            }
+                        });
+                mDialog = builder.show();
+            }
+        });
 
         return rootView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        // Get rid of the about dialog if it's still up
+        if (mDialog != null)
+            mDialog.dismiss();
     }
 }
