@@ -69,9 +69,9 @@ public class GameActivity extends Activity {
          @Override
          public void run() {
             mMediaPlayer = MediaPlayer.create(GameActivity.this,
-                  winner == Tile.Owner.X ? R.raw.oldedgar_winner
-                        : winner == Tile.Owner.O ? R.raw.notr_loser
-                        : R.raw.department64_draw
+                  winner == Tile.Owner.X ? R.raw.winner
+                        : winner == Tile.Owner.O ? R.raw.looser
+                        : R.raw.draw
             );
             mMediaPlayer.start();
             dialog.show();
@@ -95,7 +95,7 @@ public class GameActivity extends Activity {
    @Override
    protected void onResume() {
       super.onResume();
-      mMediaPlayer = MediaPlayer.create(this, R.raw.frankum_loop001e);
+      mMediaPlayer = MediaPlayer.create(this, R.raw.loop);
       mMediaPlayer.setLooping(true);
       mMediaPlayer.start();
    }
