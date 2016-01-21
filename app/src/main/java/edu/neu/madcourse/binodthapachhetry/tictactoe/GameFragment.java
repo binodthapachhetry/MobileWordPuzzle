@@ -50,10 +50,10 @@ public class GameFragment extends Fragment {
       setRetainInstance(true);
       initGame();
       mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
-      mSoundX = mSoundPool.load(getActivity(), R.raw.sergenious_movex, 1);
-      mSoundO = mSoundPool.load(getActivity(), R.raw.sergenious_moveo, 1);
-      mSoundMiss = mSoundPool.load(getActivity(), R.raw.erkanozan_miss, 1);
-      mSoundRewind = mSoundPool.load(getActivity(), R.raw.joanne_rewind, 1);
+      mSoundX = mSoundPool.load(getActivity(), R.raw.move_x, 1);
+      mSoundO = mSoundPool.load(getActivity(), R.raw.move_o, 1);
+      mSoundMiss = mSoundPool.load(getActivity(), R.raw.miss, 1);
+      mSoundRewind = mSoundPool.load(getActivity(), R.raw.rewind, 1);
    }
 
    private void clearAvailable() {
