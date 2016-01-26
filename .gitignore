@@ -36,5 +36,4 @@ proguard/
 captures/
 
 # Additional files to ignore
-.idea/
-
+.idea
