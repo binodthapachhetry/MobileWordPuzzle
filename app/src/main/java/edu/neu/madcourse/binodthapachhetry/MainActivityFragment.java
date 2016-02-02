@@ -32,7 +32,17 @@ public class MainActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
 
-        // Generate Erro Button
+        // About button
+        View aboutButton = rootView.findViewById(R.id.about_button);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), AboutActivity.class);
+                startActivity(i);
+            }
+        });
+
+        // Generate Error Button
         View errButton = rootView.findViewById(R.id.generate_error_button);
         errButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,20 +58,22 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity.class);
-                getActivity().startActivity(i);
+                startActivity(i);
             }
         });
 
 
-        // About button
-        View aboutButton = rootView.findViewById(R.id.about_button);
-        aboutButton.setOnClickListener(new View.OnClickListener() {
+        // Dictionary Button
+        View dictionaryButton = rootView.findViewById(R.id.dictionary_button);
+        dictionaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent j = new Intent(getActivity(), AboutActivity.class);
-                startActivity(j);
+                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.Dictionary.DictionaryActivity.class);
+                startActivity(i);
             }
         });
+
+
 
         // Quit button
         View quitButton = rootView.findViewById(R.id.quit_button);
