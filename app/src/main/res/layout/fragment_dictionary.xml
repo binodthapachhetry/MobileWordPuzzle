@@ -1,88 +1,74 @@
-<FrameLayout
+<LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="10"
     tools:context="edu.neu.madcourse.binodthapachhetry.Dictionary.DictionaryActivityFragment"
     tools:showIn="@layout/activity_dictionary">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="325dp"
-        android:orientation="vertical">
+
 
     <EditText
         android:id="@+id/textBox"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_weight="1"
         android:gravity="center"
-        android:layout_weight="0.1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:hint="@string/dictionary_hint"
-        android:background="@drawable/edit_text_style">
+        android:paddingBottom="5dp"
+        android:inputType="text">
     </EditText>
 
 
         <TextView
             android:id="@+id/textViewBox"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center"
-            android:layout_weight="0.8"
+            android:layout_weight="6"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_style"
             android:scrollbars = "vertical">
         </TextView>
 
 
-    </LinearLayout>
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="bottom"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="55dp"
-        android:layout_marginRight="5dp">
+        android:layout_gravity="bottom">
 
         <Button
             android:id="@+id/button_clear"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/restart"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/dictionary_button_margin"
             android:text="@string/dictionary_clear" />
 
         <Button
-            android:id="@+id/button_acknowledgement"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/home"
-            android:text="@string/dictionary_acknowledgment"/>
-
-
-        <Button
             android:id="@+id/button_main_menu"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/home"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/dictionary_button_margin"
             android:text="@string/dictionary_home"/>
 
     </LinearLayout>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/button_acknowledgement"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dictionary_button_margin"
+        android:text="@string/dictionary_acknowledgment"/>
+
+</LinearLayout>
 
 
