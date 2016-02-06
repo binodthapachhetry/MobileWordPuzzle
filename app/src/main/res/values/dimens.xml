@@ -45,4 +45,9 @@
     <dimen name="tictactoe6_menu_button_padding">10dp</dimen>
 
 
+    <dimen name="dictionary_elevation_low">4dp</dimen>
+    <dimen name="dictionary_control_padding">10dp</dimen>
+    <dimen name="dictionary_button_margin">1dp</dimen>
+
+
 </resources>
