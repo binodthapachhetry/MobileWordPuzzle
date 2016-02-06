@@ -1,0 +1,4 @@
+gdansk
+gdinfo
+gdp
+gdynia

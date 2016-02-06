@@ -1,0 +1,7 @@
+fdic
+fdname
+fdnames
+fdr
+fdtype
+fdub
+fdubs

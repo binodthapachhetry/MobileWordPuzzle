@@ -3,12 +3,16 @@ package edu.neu.madcourse.binodthapachhetry.Dictionary;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +23,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 
 import edu.neu.madcourse.binodthapachhetry.R;
 
@@ -32,6 +39,7 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
     EditText editText;
     TextView textView;
     Trie tt = null;
+    public List<String> stringVisited = new ArrayList<String>();
 
 
     public DictionaryActivityFragment() {
@@ -42,7 +50,7 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         resources = getResources();
-        final Context context = getContext();
+        final Context contextOnCreate = getContext();
 
         View rootView = inflater.inflate(R.layout.fragment_dictionary, container, false);
 
@@ -50,11 +58,13 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
         editText.setOnClickListener(this);
 
         textView = (TextView) rootView.findViewById(R.id.textViewBox);
+        textView.setMovementMethod(new ScrollingMovementMethod());
 
-        final MediaPlayer mp = MediaPlayer.create(context,R.raw.dictionary_match);
+        final MediaPlayer mp = MediaPlayer.create(contextOnCreate,R.raw.dictionary_match);
         mp.setVolume(0.5f, 0.5f);
 
         editText.addTextChangedListener(new TextWatcher() {
+
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -62,20 +72,29 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length() == 0) {
-                    textView.setText("");
-                    tt = null;
-                }
 
-                if (s.length() > 2) {
-                    if (tt.contains(s.toString())) {
-                        textView.append(s + "\n");
-                        mp.start();
-                    }
-                } else if (s.length() == 1) {
-                    if (tt == null) {
+                if ((s.length() == 0)){
+                    tt = null;
+//                    textView.setText("");
+
+                }else if (!(stringVisited.contains(s.toString()))) {
+                    if (s.length()>2) {
+                        if (tt.contains(s.toString())) {
+                            textView.append(s + "\n");
+                            mp.start();
+                            stringVisited.add(s.toString());
+                        }
+                    } else if (s.length() == 2) {
                         tt = new Trie();
-                        InputStream ins = getResources().openRawResource(getResources().getIdentifier(s.toString(), "raw", context.getPackageName()));
+
+                        String fileName = s.toString() + ".txt";
+                        AssetManager am = contextOnCreate.getAssets();
+                        InputStream ins = null;
+                        try {
+                            ins = am.open(fileName);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                         BufferedReader reader = new BufferedReader(new InputStreamReader(ins));
                         String line;
                         try {
@@ -86,8 +105,9 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
                             e.printStackTrace();
                         }
                     }
-
                 }
+
+
             }
 
 
@@ -111,6 +131,7 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
             public void onClick(View view) {
                 editText.getText().clear();
                 textView.setText("");
+                stringVisited.clear();
             }
         });
 
@@ -148,6 +169,7 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
 
     @Override
     public void onClick(View v) {
-
     }
+
+
 }
