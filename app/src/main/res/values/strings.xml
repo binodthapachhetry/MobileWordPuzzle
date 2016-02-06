@@ -60,7 +60,14 @@ both sides in the larger game.\n\
     <string name="dictionary_acknowledgment">Acknowledgement</string>
     <string name="dictionary_home">Return</string>
     <string name="dictionary_hint">Search Text</string>
-    <string name="dictionary_acknowledgement_message">Thank you to:</string>
+    <string name="dictionary_acknowledgement_message">\
+        Sound credit : http://www.freesound.org
+    \n\
+    http://developer.android.com/intl/es/sdk/index.html
+        \n\
+        https://www.cs.bu.edu/teaching/c/tree/trie/
+    </string>
+
     <string name="dictionary_alphabets">abcdefghijklmnopqrstuvwxyz</string>
 
 

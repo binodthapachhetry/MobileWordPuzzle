@@ -3,11 +3,9 @@ package edu.neu.madcourse.binodthapachhetry.Dictionary;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -118,8 +116,6 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
         });
 
 
-
-
         // buttons
         View acknowledgeButton = rootView.findViewById(R.id.button_acknowledgement);
         View returnButton = rootView.findViewById(R.id.button_main_menu);
@@ -170,6 +166,4 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
     @Override
     public void onClick(View v) {
     }
-
-
 }
