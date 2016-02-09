@@ -83,25 +83,32 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
                             stringVisited.add(s.toString());
                         }
                     } else if (s.length() == 2) {
+
+
                         tt = new Trie();
 
-                        String fileName = s.toString() + ".txt";
-                        AssetManager am = contextOnCreate.getAssets();
-                        InputStream ins = null;
+
                         try {
+                            String fileName = s.toString() + ".txt";
+                            AssetManager am = contextOnCreate.getAssets();
+                            InputStream ins = null;
                             ins = am.open(fileName);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(ins));
-                        String line;
-                        try {
-                            while ((line = reader.readLine()) != null) {
-                                tt.add(line);
+                            BufferedReader reader = new BufferedReader(new InputStreamReader(ins));
+                            String line;
+                            try {
+                                while ((line = reader.readLine()) != null) {
+                                    tt.add(line);
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
                             }
+
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+
+
+
                     }
                 }
 

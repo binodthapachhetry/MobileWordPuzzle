@@ -1,6 +1,5 @@
 package edu.neu.madcourse.binodthapachhetry.Dictionary;
 
-
 public class Trie {
 
     public static class Node {
@@ -12,6 +11,8 @@ public class Trie {
             info = ch;
             isWord = false;
             children = new Node[128];
+
+
         }
     }
 
