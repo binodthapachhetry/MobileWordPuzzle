@@ -83,11 +83,7 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
                             stringVisited.add(s.toString());
                         }
                     } else if (s.length() == 2) {
-
-
                         tt = new Trie();
-
-
                         try {
                             String fileName = s.toString() + ".txt";
                             AssetManager am = contextOnCreate.getAssets();
@@ -95,6 +91,7 @@ public class DictionaryActivityFragment extends Fragment implements View.OnClick
                             ins = am.open(fileName);
                             BufferedReader reader = new BufferedReader(new InputStreamReader(ins));
                             String line;
+
                             try {
                                 while ((line = reader.readLine()) != null) {
                                     tt.add(line);
