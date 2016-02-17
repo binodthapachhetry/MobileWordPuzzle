@@ -74,6 +74,16 @@ public class MainActivityFragment extends Fragment {
         });
 
 
+        // Scraggle Button
+        View scraggleButton = rootView.findViewById(R.id.scraggle_button);
+        scraggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         // Quit button
         View quitButton = rootView.findViewById(R.id.quit_button);

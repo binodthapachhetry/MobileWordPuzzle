@@ -69,7 +69,13 @@ both sides in the larger game.\n\
     </string>
 
     <string name="dictionary_alphabets">abcdefghijklmnopqrstuvwxyz</string>
+    <string name="title_activity_scraggle_main">ScraggleMainActivity</string>
 
 
+    <string name="scraggle_label">Scraggle</string>
+    <string name="scraggle_new_game_label">New Game</string>
+    <string name="scraggle_acknowledgement_label">Acknowledgement</string>
+    <string name="scraggle_acknowledgement_text">Acknowledgement to UT3, music places, dictionary words,etc</string>
+    <string name="title_activity_scraggle_game">ScraggleGameActivity</string>
 
 </resources>
