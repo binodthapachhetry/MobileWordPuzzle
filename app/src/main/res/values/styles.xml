@@ -31,4 +31,14 @@
         <item name="android:src">@drawable/tile</item>
     </style>
 
+    <style name="ScraggleTileButton">
+        <item name="android:layout_width">@dimen/tictactoe6_tile_size</item>
+        <item name="android:layout_height">@dimen/tictactoe6_tile_size</item>
+        <item name="android:layout_margin">@dimen/tictactoe6_tile_margin</item>
+        <item name="android:background">@color/field_color</item>
+        <item name="android:padding">@dimen/tictactoe6_tile_padding</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/scraggle_tile</item>
+    </style>
+
 </resources>
