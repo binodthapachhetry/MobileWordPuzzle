@@ -77,5 +77,13 @@ both sides in the larger game.\n\
     <string name="scraggle_acknowledgement_label">Acknowledgement</string>
     <string name="scraggle_acknowledgement_text">Acknowledgement to UT3, music places, dictionary words,etc</string>
     <string name="title_activity_scraggle_game">ScraggleGameActivity</string>
+    <string name="scraggle_pause">Pause</string>
+    <string name="scraggle_resume">Resume Game</string>
+    <string name="scraggle_quit">Quit</string>
+    <string name="scraggle_phase">Phase</string>
+    <string name="scraggle_score">Score</string>
+    <string name="scraggle_rules">Rules</string>
+
+
 
 </resources>

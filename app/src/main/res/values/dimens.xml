@@ -48,6 +48,13 @@
     <dimen name="dictionary_elevation_low">4dp</dimen>
     <dimen name="dictionary_control_padding">10dp</dimen>
     <dimen name="dictionary_button_margin">1dp</dimen>
+    <dimen name="scraggle_tile_size">24dp</dimen>
+    <dimen name="scraggle_vertical_margin">2dp</dimen>
+    <dimen name="scraggle_horizontal_margin">2dp</dimen>
+    <dimen name="scraggle_small_board_margin">1dp</dimen>
+    <dimen name="scraggle_size_large">15sp</dimen>
+    <dimen name="scraggle_elevation_low">1dp</dimen>
 
+    <dimen name="scraggle_small_board_padding">1dp</dimen>
 
 </resources>

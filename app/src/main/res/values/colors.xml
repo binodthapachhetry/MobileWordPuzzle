@@ -14,5 +14,6 @@
     <color name="tictactoe6_gray_color">#bfbfbf</color>
     <color name="tictactoe6_purple_color">#7f007f</color>
     <color name="tictactoe6_red_color">#ff7f7f</color>
-    <color name="tictactoe6_thinking_background_color">#cfdfdfdf</color>
+    <color name="tictactoe6_thinking_background_color">#cf716e6e</color>
+    <color name="scraggle_text_view_background_color">#bbf28c</color>
 </resources>

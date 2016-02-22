@@ -32,8 +32,8 @@
     </style>
 
     <style name="ScraggleTileButton">
-        <item name="android:layout_width">@dimen/tictactoe6_tile_size</item>
-        <item name="android:layout_height">@dimen/tictactoe6_tile_size</item>
+        <item name="android:layout_width">@dimen/scraggle_tile_size</item>
+        <item name="android:layout_height">@dimen/scraggle_tile_size</item>
         <item name="android:layout_margin">@dimen/tictactoe6_tile_margin</item>
         <item name="android:background">@color/field_color</item>
         <item name="android:padding">@dimen/tictactoe6_tile_padding</item>

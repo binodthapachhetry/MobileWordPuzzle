@@ -69,6 +69,7 @@
             android:name=".Scraggle.ScraggleGameActivity"
             android:label="@string/title_activity_scraggle_game"
             android:parentActivityName=".Scraggle.ScraggleMainActivity"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
