@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_scraggle_misc"
+    tools:context="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
@@ -24,33 +28,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonrules"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="@dimen/dictionary_button_margin"
-        android:text="@string/scraggle_rules" />
-
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/button_mute"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:drawableTop="@drawable/speakermute"
-            />
-
-        <Button
-            android:id="@+id/button_unmute"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:drawableTop="@drawable/speakerup"
-            />
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,5 +44,34 @@
         </TextView>
 
     </ScrollView>
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/scraggle_button_mute"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/speakermute"
+            />
+
+        <!--
+        <Button
+            android:id="@+id/scraggle_button_unmute"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/speakerup"
+            />
+        -->
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

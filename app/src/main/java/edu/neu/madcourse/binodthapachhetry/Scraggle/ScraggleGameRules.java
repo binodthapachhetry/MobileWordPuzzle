@@ -1,4 +1,4 @@
-package edu.neu.madcourse.binodthapachhetry;
+package edu.neu.madcourse.binodthapachhetry.Scraggle;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,14 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class AboutActivity extends AppCompatActivity {
+import edu.neu.madcourse.binodthapachhetry.R;
+
+public class ScraggleGameRules extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_scraggle_game_rules);
+
+
+
     }
 
 }

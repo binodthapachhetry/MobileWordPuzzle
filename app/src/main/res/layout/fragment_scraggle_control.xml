@@ -22,6 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/tictactoe6_red_color"
             android:gravity="center" />
 
     </LinearLayout>
@@ -34,7 +36,7 @@
 
 
     <Button
-        android:id="@+id/button_pause"
+        android:id="@+id/scraggle_button_pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
@@ -42,7 +44,7 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/button_resume_game"
+        android:id="@+id/scraggle_button_resume_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
@@ -50,7 +52,15 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/button_quit"
+        android:id="@+id/scraggle_button_restart_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dictionary_button_margin"
+        android:text="@string/scraggle_restart"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/scraggle_button_quit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
