@@ -8,11 +8,13 @@
 
     <color name="tictactoe6_field_color">#b5cee0</color>
     <color name="tictactoe6_border_color">#7f7f7f</color>
-    <color name="tictactoe6_dark_border_color">#4f4f4f</color>
+    <color name="tictactoe6_dark_border_color">#000000</color>
     <color name="tictactoe6_available_color">#7fbf7f</color>
     <color name="tictactoe6_blue_color">#7f7fff</color>
     <color name="tictactoe6_gray_color">#bfbfbf</color>
     <color name="tictactoe6_purple_color">#7f007f</color>
+    <color name="tictactoe6_green_color">#10450b</color>
     <color name="tictactoe6_red_color">#ff7f7f</color>
-    <color name="tictactoe6_thinking_background_color">#cfdfdfdf</color>
+    <color name="tictactoe6_thinking_background_color">#cf716e6e</color>
+    <color name="scraggle_text_view_background_color">#f9faf8</color>
 </resources>

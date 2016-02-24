@@ -1,22 +1,3 @@
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.neu.madcourse.binodthapachhetry.MainActivityFragment"
-    tools:showIn="@layout/activity_main">
-
-    <ListView
-        android:id="@+id/listview_item"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"    />
-
-</FrameLayout>
--->
-
 
 <LinearLayout
 
@@ -24,9 +5,9 @@
 
     xmlns:tools="http://schemas.android.com/tools"
 
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
 
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
 
     android:background="@drawable/menu_background"
 
@@ -117,6 +98,22 @@
         android:padding="@dimen/menu_button_padding"
 
         android:text="@string/dictionary_label"/>
+
+    <Button
+
+        android:id="@+id/scraggle_button"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:layout_margin="@dimen/menu_button_margin"
+
+        android:padding="@dimen/menu_button_padding"
+
+        android:text="@string/scraggle_label"/>
 
 
     <Button

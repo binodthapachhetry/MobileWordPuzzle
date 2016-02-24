@@ -69,7 +69,56 @@ both sides in the larger game.\n\
     </string>
 
     <string name="dictionary_alphabets">abcdefghijklmnopqrstuvwxyz</string>
+    <string name="title_activity_scraggle_main">ScraggleMainActivity</string>
 
+
+    <string name="scraggle_label">Scraggle</string>
+    <string name="scraggle_new_game_label">New Game</string>
+    <string name="scraggle_acknowledgement_label">Acknowledgement</string>
+    <string name="scraggle_acknowledgement_text">\
+
+        Acknowledgement to UT3, dictionary words from class
+        \n\
+        Trie: https://www.cs.bu.edu/teaching/c/tree/trie/
+        \n\
+        Sound credit : http://www.freesound.org
+        \n\
+        Mute icon: https://www.iconfinder.com/
+        \n\
+        Populating Adjacent cells help: Stefan Olaffson
+        \n\
+        Finding words in tiles help: Aditya Ponnada
+        \n\
+
+    </string>
+    <string name="title_activity_scraggle_game">ScraggleGameActivity</string>
+    <string name="scraggle_pause">Pause</string>
+    <string name="scraggle_resume">Resume Game</string>
+    <string name="scraggle_restart">Restart</string>
+    <string name="scraggle_quit">Quit</string>
+    <string name="scraggle_phase">Phase</string>
+    <string name="scraggle_score">Score</string>
+    <string name="scraggle_rules">Rules</string>
+
+    <string name="title_activity_scraggle_game_rules">Scraggle Game Rules</string>
+    <string name="scraggle_game_rules">\
+        1. There are two phases in the game; each lasting for 90 seconds
+        \n\
+        2. During Phase 1, within each small tile, you should try to select the longest words
+        \n\
+        3. During Phase 2, within letters remaining in larger tiles, select the longest words
+        \n\
+        4. Each word detected will count as 1 points
+        \n\ Each word detected will count as 1 points
+        5. Longer the word in Phase 1, higher possibility of words in Phase 2
+        \n\
+
+
+    </string>
+    <string name="scraggle_game_over">Time is up! Do you want to quit or play again?</string>
+
+    <string name="scraggle_quit_game">Quit</string>
+    <string name="scraggle_game_restart">Play Again</string>
 
 
 </resources>
