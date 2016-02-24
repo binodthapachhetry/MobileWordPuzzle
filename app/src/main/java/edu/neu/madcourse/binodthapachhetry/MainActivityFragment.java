@@ -57,7 +57,7 @@ public class MainActivityFragment extends Fragment {
         tttButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity.class);
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity.class);
                 startActivity(i);
             }
         });
@@ -68,7 +68,7 @@ public class MainActivityFragment extends Fragment {
         dictionaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.Dictionary.DictionaryActivity.class);
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.Dictionary.DictionaryActivity.class);
                 startActivity(i);
             }
         });
@@ -79,7 +79,7 @@ public class MainActivityFragment extends Fragment {
         scraggleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(),edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity.class);
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity.class);
                 startActivity(i);
             }
         });

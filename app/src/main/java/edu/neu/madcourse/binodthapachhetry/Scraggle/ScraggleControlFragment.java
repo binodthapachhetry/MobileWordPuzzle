@@ -62,9 +62,6 @@ public class ScraggleControlFragment extends Fragment {
 
                 if (millisUntilFinished/ 1000 < 30){
                     scraggleTimer.setTextColor(Color.RED);
-                    // play timer
-
-//                    mMediaPlayer.setLooping(true);
 
                     mMediaPlayer.start();
 
@@ -96,6 +93,40 @@ public class ScraggleControlFragment extends Fragment {
                     @Override
                     public void onFinish(){
                         mMediaPlayer.stop();
+
+                        AlertDialog.Builder builder =
+                                new AlertDialog.Builder(getActivity());
+                        builder.setMessage(R.string.quit_text);
+
+                        builder.setPositiveButton(R.string.scraggle_quit_game,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface,
+                                                        int i) {
+
+                                        Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
+                                        startActivity(helpIntent);
+
+                                    }
+                                });
+
+                        builder.setNegativeButton(R.string.scraggle_game_restart,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface,
+                                                        int i) {
+                                        timerPhase1.cancel();
+                                        ((ScraggleGameActivity) getActivity()).restartGame();
+                                        phaseCounter.setText("1");
+                                        timerPhase1.start();
+                                        scraggleTimer.setTextSize(40);
+                                        restartListener.clearScores();
+                                        restartListener.clearWordList();
+
+
+                                    }
+                                });
+                        mDialog = builder.show();
                     }
 
                 }.start();
@@ -169,7 +200,8 @@ public class ScraggleControlFragment extends Fragment {
         buttonQuit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goBack();
+                Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
+                startActivity(helpIntent);
             }
         });
 

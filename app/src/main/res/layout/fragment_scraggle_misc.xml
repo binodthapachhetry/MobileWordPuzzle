@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/scraggle_text_view_background_color"
-            android:scrollbars = "vertical">
+            android:scrollbars = "horizontal">
         </TextView>
 
     </ScrollView>
