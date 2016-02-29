@@ -2,6 +2,7 @@ package edu.neu.madcourse.binodthapachhetry.Scraggle;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,6 +33,9 @@ public class ScraggleControlFragment extends Fragment {
     public CountDownTimer countDownTimerOne;
     public CountDownTimer countDownTimerTwo;
     private boolean timerStarted = false;
+    private boolean isPaused = false;
+    private long timeRemaining = 0;
+    public FragmentManager fm;
 
     public TextView scraggleTimer;
     public TextView phaseCounter;
@@ -49,27 +53,20 @@ public class ScraggleControlFragment extends Fragment {
 
         phaseCounter = (TextView) rootView.findViewById(R.id.scragglephasecount);
        scraggleTimer = (TextView) rootView.findViewById(R.id.scraggletimer);
-        View buttonPause = rootView.findViewById(R.id.scraggle_button_pause);
-        View buttonResume = rootView.findViewById(R.id.scraggle_button_resume_game);
-        View buttonRestart = rootView.findViewById(R.id.scraggle_button_restart_game);
+        final View buttonPause = rootView.findViewById(R.id.scraggle_button_pause);
+        final View buttonResume = rootView.findViewById(R.id.scraggle_button_resume_game);
+        final View buttonRestart = rootView.findViewById(R.id.scraggle_button_restart_game);
         View buttonQuit = rootView.findViewById(R.id.scraggle_button_quit);
 
-//        mMediaPlayer = MediaPlayer.create(this.getContext(),R.raw.updatedtimer);
+        fm = getFragmentManager();
+
+        buttonResume.setEnabled(false);
+
 
         phaseCounter.setText("1");
         countDownTimerOne = new MyCountDownTimerOne(startTime, interval);
 
         countDownTimerOne.start();
-
-//        if(!timerStarted) {
-//
-//            timerListener.changeToNextLevel();
-//            phaseCounter.setText("2");
-//
-//            countDownTimerTwo = new MyCountDownTimer(startTime, interval);
-//
-//            countDownTimerTwo.start();
-//        }
 
         buttonRestart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,10 +97,63 @@ public class ScraggleControlFragment extends Fragment {
         buttonQuit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
-                startActivity(helpIntent);
+                getActivity().finish();
+                Intent myIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity.class);
+
+//                Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
+                startActivity(myIntent);
             }
         });
+
+        buttonPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isPaused = true;
+                //Enable the resume and cancel button
+                buttonResume.setEnabled(true);
+                buttonPause.setEnabled(false);
+                buttonRestart.setEnabled(false);
+
+
+                Fragment f = fm.findFragmentById(R.id.scraggle_fragment_game);
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(f)
+                        .commit();
+
+            }
+        });
+
+        buttonResume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isPaused = false;
+
+                if (countDownTimerOne != null) {
+                    countDownTimerOne.cancel();
+                    countDownTimerOne = new MyCountDownTimerOne(timeRemaining, interval);
+                    countDownTimerOne.start();
+
+                }else if (countDownTimerTwo != null) {
+                    countDownTimerTwo.cancel();
+                    countDownTimerTwo = new MyCountDownTimerOne(timeRemaining, interval);
+                    countDownTimerTwo.start();
+
+                }
+
+                Fragment f = fm.findFragmentById(R.id.scraggle_fragment_game);
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(f)
+                        .commit();
+
+                buttonPause.setEnabled(true);
+                buttonResume.setEnabled(false);
+                buttonRestart.setEnabled(true);
+
+            }
+        });
+
 
         return rootView;
 
@@ -126,6 +176,9 @@ public class ScraggleControlFragment extends Fragment {
 
         @Override
         public void onFinish() {
+            mPlayer.pause();
+            Toast.makeText(getActivity(), "Entering Phase 2 !",
+                    Toast.LENGTH_LONG).show();
             timerListener.changeToNextLevel();
             phaseCounter.setText("2");
             countDownTimerTwo = new MyCountDownTimerTwo(startTime, interval);
@@ -136,35 +189,87 @@ public class ScraggleControlFragment extends Fragment {
 
         @Override
         public void onTick(long millisUntilFinished) {
-            scraggleTimer.setText(String.valueOf(millisUntilFinished/ 1000));
-            scraggleTimer.setTextColor(Color.GREEN);
+            if(isPaused){
+                mPlayer.pause();
+                cancel();
+            }
+            else {
+                scraggleTimer.setText(String.valueOf(millisUntilFinished / 1000));
+                scraggleTimer.setTextColor(Color.GREEN);
+                timeRemaining = millisUntilFinished;
 
-            if (millisUntilFinished/ 1000 < 30){
-                scraggleTimer.setTextColor(Color.RED);
-                mPlayer.start();
-        }
+                if (millisUntilFinished / 1000 < 30) {
+                    scraggleTimer.setTextColor(Color.RED);
+                    mPlayer.start();
+                }
+            }
         }
     }
 
     public class MyCountDownTimerTwo extends CountDownTimer {
-        private MediaPlayer mPlayer;
+        private MediaPlayer mPlayerTwo;
         public MyCountDownTimerTwo(long startTime, long interval) {
             super(startTime, interval);
-            mPlayer = MediaPlayer.create(getActivity(),R.raw.updatedtimer);
+            mPlayerTwo = MediaPlayer.create(getActivity(),R.raw.updatedtimer);
         }
 
         @Override
         public void onFinish() {
+            mPlayerTwo.stop();
+            AlertDialog.Builder builder =
+                    new AlertDialog.Builder(getActivity());
+            builder.setMessage(R.string.quit_text);
+
+            builder.setPositiveButton(R.string.scraggle_quit_game,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface,
+                                            int i) {
+
+                            Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
+                            startActivity(helpIntent);
+
+                        }
+                    });
+
+            builder.setNegativeButton(R.string.scraggle_game_restart,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface,
+                                            int i) {
+                            scraggleTimer.setTextSize(40);
+                            restartListener.clearScores();
+                            restartListener.clearWordList();
+                            phaseCounter.setText("1");
+
+                            ((ScraggleGameActivity) getActivity()).restartGame();
+                            countDownTimerOne = new MyCountDownTimerOne(startTime, interval);
+
+                            countDownTimerOne.start();
+
+
+                        }
+                    });
+            mDialog = builder.show();
+
 
         }
 
         @Override
         public void onTick(long millisUntilFinished) {
-            scraggleTimer.setText(String.valueOf(millisUntilFinished/ 1000));
-            scraggleTimer.setTextColor(Color.GREEN);
+            if(isPaused){
+                mPlayerTwo.pause();
+                cancel();
+            }
+            else {
+                timeRemaining = millisUntilFinished;
+                scraggleTimer.setText(String.valueOf(millisUntilFinished / 1000));
+                scraggleTimer.setTextColor(Color.GREEN);
 
-            if (millisUntilFinished/ 1000 < 30){
-                scraggleTimer.setTextColor(Color.RED);
+                if (millisUntilFinished / 1000 < 30) {
+                    scraggleTimer.setTextColor(Color.RED);
+                    mPlayerTwo.start();
+                }
             }
         }
     }
