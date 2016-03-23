@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/communication_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/communication_registor_button"
+                android:onClick="onClick"
+                android:text="@string/register" />
+
+            <Button
+                android:id="@+id/communication_unregistor_button"
+                android:onClick="onClick"
+                android:text="@string/unregister" />
+        </TableRow>
+    </TableLayout>
+    <EditText
+        android:id="@+id/communication_edit_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="input message here ..."
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:textColorHint="#238745"
+        android:textSize="16sp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/communication_send"
+                android:onClick="onClick"
+                android:text="@string/send_label" />
+
+            <Button
+                android:id="@+id/communication_clear"
+                android:onClick="onClick"
+                android:text="@string/clear_label" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
