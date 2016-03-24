@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/speakerup.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-anydpi-v21/speakerup.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/speakermute.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-anydpi-v21/speakermute.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_settings_voice_24dp.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_settings_voice_24dp.xml"
+    }
+]

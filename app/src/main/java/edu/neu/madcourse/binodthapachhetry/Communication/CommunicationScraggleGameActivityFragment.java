@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,12 +43,12 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
     private SoundPool mSoundPool;
     private float mVolume = 1f;
 
-    private ScraggleTile mEntireBoard = new ScraggleTile(this);
-    private ScraggleTile mLargeTiles[] = new ScraggleTile[9];
-    private ScraggleTile mSmallTiles[][] = new ScraggleTile[9][9];
+    private CommunicationScraggleTile mEntireBoard = new CommunicationScraggleTile(this);
+    private CommunicationScraggleTile mLargeTiles[] = new CommunicationScraggleTile[9];
+    private CommunicationScraggleTile mSmallTiles[][] = new CommunicationScraggleTile[9][9];
 
     public CommunicationScraggleControlFragment scraggleControl;
-    public ScraggleMiscFragment scraggleMisc;
+    public CommunicationScraggleMiscFragment scraggleMisc;
 
     public Trie tt;
 
@@ -59,7 +60,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
     public ArrayList<String> wordsFound = new ArrayList<>();
 
-    public ArrayList<ArrayList<ScraggleTile>> mAvailable = new ArrayList<ArrayList<ScraggleTile>>();
+    public ArrayList<ArrayList<CommunicationScraggleTile>> mAvailable = new ArrayList<ArrayList<CommunicationScraggleTile>>();
 
 
     public int scoreSummary = 0;
@@ -95,7 +96,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
         mSoundX = mSoundPool.load(getActivity(), R.raw.ting, 1);
 
         for (int i = 0; i < 9; i++) {
-            mAvailable.add(new ArrayList<ScraggleTile>());
+            mAvailable.add(new ArrayList<CommunicationScraggleTile>());
         }
 
         for (int i = 0; i < 9; i++) {
@@ -112,7 +113,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
     }
 
-    public boolean isAvailable(int large, ScraggleTile tile) {
+    public boolean isAvailable(int large, CommunicationScraggleTile tile) {
         if (mAvailable.get(large).isEmpty()) {
             return true;
         } else {
@@ -155,7 +156,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
                 final TextView inner = (TextView) outer.findViewById(mSmallIds[small]);
                 final int fLarge = large;
                 final int fSmall = small;
-                final ScraggleTile smallTile = mSmallTiles[large][small];
+                final CommunicationScraggleTile smallTile = mSmallTiles[large][small];
                 smallTile.setView(inner);
 
                 int index = sequenceForTile.get(small);
@@ -174,20 +175,20 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
                             if (smallTile.getTileStatus() == 4) {
                                 inner.setBackgroundResource(R.drawable.tile_empty);
-                                smallTile.setTileStatus(ScraggleTile.TileStatus.SELECTED);
+                                smallTile.setTileStatus(CommunicationScraggleTile.TileStatus.SELECTED);
                                 tileSelected.get(fLarge).add(fSmall);
                                 setAvailableFromLastMove(fLarge, fSmall);
 
                             } else if (smallTile.getTileStatus() == 5) {
                                 inner.setBackgroundResource(R.drawable.tile_available);
-                                smallTile.setTileStatus(ScraggleTile.TileStatus.UNSELECTED);
+                                smallTile.setTileStatus(CommunicationScraggleTile.TileStatus.UNSELECTED);
 
 
                                 Object a = fSmall;
                                 int index = tileSelected.get(fLarge).indexOf(a);
                                 for (int i = index; i < tileSelected.get(fLarge).size(); i++) {
                                     int smallIndex = tileSelected.get(fLarge).get(index);
-                                    mSmallTiles[fLarge][smallIndex].setTileStatus(ScraggleTile.TileStatus.UNSELECTED);
+                                    mSmallTiles[fLarge][smallIndex].setTileStatus(CommunicationScraggleTile.TileStatus.UNSELECTED);
                                     mSmallTiles[fLarge][smallIndex].getView().setBackgroundResource(R.drawable.tile_available);
                                     tileSelected.get(fLarge).remove(i);
 
@@ -208,9 +209,13 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
                                 scoreSummary = (scoreSummary + 1);
                                 wfListener.addScores(scoreSummary);
                                 wfListener.addWords(lgTileWords.get(fLarge));
+                                wfListener.sendNotification(lgTileWords.get(fLarge),scoreSummary);
+                                Log.d("Starting to GCM :", lgTileWords.get(fLarge));
+//                                wfSendListener.sendNotification(lgTileWords.get(fLarge));
                                 wordsFound.add(lgTileWords.get(fLarge));
                                 setColorsWordFound(fLarge);
                                 mSoundPool.play(mSoundX, mVolume, mVolume, 1, 0, 1f);
+
 
                             } else if (found && wordsFound.contains(lgTileWords.get(fLarge))) {
                                 makeMove(fLarge, fSmall);
@@ -242,8 +247,8 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
     private void makeMove(int large, int small) {
         mLastLarge = large;
         mLastSmall = small;
-        ScraggleTile sTile = mSmallTiles[large][small];
-        ScraggleTile lGTile = mLargeTiles[large];
+        CommunicationScraggleTile sTile = mSmallTiles[large][small];
+        CommunicationScraggleTile lGTile = mLargeTiles[large];
 
 
         Context context = getContext();
@@ -255,9 +260,14 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
     public interface wordFoundListener {
         public void addWords(String word);
-
         public void addScores(int score);
+        public void sendNotification(String word, Integer score);
     }
+
+//    public interface wordFoundSendNotificationListener{
+//        public void sendNotification(String word);
+//
+//    }
 
     @Override
     public void onAttach(Activity activity) {
@@ -265,17 +275,22 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
         try {
             wfListener = (wordFoundListener) activity;
+//            wfSendListener = (wordFoundSendNotificationListener) activity;
         } catch (Exception e) {
 
         }
 
     }
 
+
+
+
+
     private void setColorsWordFound(int large) {
         for (int i = 0; i < tileSelected.get(large).size(); i++) {
             int index = tileSelected.get(large).get(i);
             mSmallTiles[large][index].getView().setBackgroundResource(R.drawable.tile_green);
-            mSmallTiles[large][index].setTileStatus(ScraggleTile.TileStatus.WORDFOUND);
+            mSmallTiles[large][index].setTileStatus(CommunicationScraggleTile.TileStatus.WORDFOUND);
         }
     }
 
@@ -283,7 +298,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
         for (int i = 0; i < tileSelected.get(large).size(); i++) {
             int index = tileSelected.get(large).get(i);
             mSmallTiles[large][index].getView().setBackgroundResource(R.drawable.tile_available);
-            mSmallTiles[large][index].setTileStatus(ScraggleTile.TileStatus.UNSELECTED);
+            mSmallTiles[large][index].setTileStatus(CommunicationScraggleTile.TileStatus.UNSELECTED);
 
         }
     }
@@ -294,18 +309,18 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                mSmallTiles[i][j].setTileStatus(ScraggleTile.TileStatus.UNSELECTED);
+                mSmallTiles[i][j].setTileStatus(CommunicationScraggleTile.TileStatus.UNSELECTED);
                 mSmallTiles[i][j].getView().setBackgroundResource(R.drawable.border_style);
             }
         }
     }
 
     public void initGame() {
-        mEntireBoard = new ScraggleTile(this);
+        mEntireBoard = new CommunicationScraggleTile(this);
         for (int large = 0; large < 9; large++) {
-            mLargeTiles[large] = new ScraggleTile(this);
+            mLargeTiles[large] = new CommunicationScraggleTile(this);
             for (int small = 0; small < 9; small++) {
-                mSmallTiles[large][small] = new ScraggleTile(this);
+                mSmallTiles[large][small] = new CommunicationScraggleTile(this);
             }
             mLargeTiles[large].setSubTiles(mSmallTiles[large]);
         }
@@ -320,13 +335,13 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
         } else {
             for (int i = 0; i < rules[small].length; i++) {
                 int smallIndex = rules[small][i];
-                ScraggleTile adjTile = mSmallTiles[large][smallIndex];
+                CommunicationScraggleTile adjTile = mSmallTiles[large][smallIndex];
                 addAvailable(large, adjTile);
             }
 
             for (int i = 0; i < tileSelected.get(large).size(); i++) {
                 int smallIndex = tileSelected.get(large).get(i);
-                ScraggleTile tile = mSmallTiles[large][smallIndex];
+                CommunicationScraggleTile tile = mSmallTiles[large][smallIndex];
 
                 if (!mAvailable.get(large).contains(tile)) {
                     addAvailable(large, tile);
@@ -342,7 +357,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
         }
     }
 
-    private void addAvailable(int small, ScraggleTile tile) {
+    private void addAvailable(int small, CommunicationScraggleTile tile) {
         mAvailable.get(small).add(tile);
     }
 
@@ -371,7 +386,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
         for (int large = 0; large < 9; large++) {
             for (int small = 0; small < 9; small++) {
-                ScraggleTile.Owner owner = ScraggleTile.Owner.valueOf(fields[index++]);
+                CommunicationScraggleTile.Owner owner = CommunicationScraggleTile.Owner.valueOf(fields[index++]);
                 mSmallTiles[large][small].setOwner(owner);
             }
         }
@@ -384,7 +399,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
     private void setSmallAvailable(int large) {
         for (int small = 0; small < 9; small++) {
-            ScraggleTile tile = mSmallTiles[large][small];
+            CommunicationScraggleTile tile = mSmallTiles[large][small];
             if (tile.getTileStatus() == 4) {
                 addAvailable(large, tile);
             }
@@ -476,13 +491,13 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
         for (int i = 0; i < 9; i++) {
             tileSelected.get(i).clear();
             for (int j = 0; j < 9; j++) {
-                ScraggleTile tile = mSmallTiles[i][j];
+                CommunicationScraggleTile tile = mSmallTiles[i][j];
                 View tileView = tile.getView();
                 if (tile.getTileStatus() != 6) {
                     tileView.setBackgroundResource(R.drawable.tile_black);
                     tileView.setClickable(false);
                 } else {
-                    tile.setTileStatus(ScraggleTile.TileStatus.UNSELECTED);
+                    tile.setTileStatus(CommunicationScraggleTile.TileStatus.UNSELECTED);
                     tileView.setBackgroundResource(R.drawable.border_style);
                 }
             }
@@ -492,4 +507,5 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
 
 
     }
+
 }

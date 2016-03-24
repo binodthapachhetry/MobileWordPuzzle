@@ -10,7 +10,7 @@ public class CommunicationScraggleGameRules extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scraggle_game_rules);
+        setContentView(R.layout.activity_communication_scraggle_game_rules);
 
 
 

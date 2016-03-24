@@ -1,0 +1,12 @@
+dsect
+dsects
+dsname
+dsnames
+dso
+dsobo
+dsobos
+dsomo
+dsomos
+dsos
+dsr
+dsri

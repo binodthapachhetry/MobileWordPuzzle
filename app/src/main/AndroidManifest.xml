@@ -3,6 +3,9 @@
     package="edu.neu.madcourse.binodthapachhetry">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -84,11 +87,67 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameActivity" />
         </activity>
-        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Communication.CommunicationMain"
+            android:label="@string/title_activity_communication_scraggle_home"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name=".Communication.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.Communication" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Communication.GcmIntentService" />
+
+        <activity
+            android:name=".Communication.CommunicationScraggleMainActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:parentActivityName=".Communication.CommunicationMain"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain" />
+        </activity>
+
+        <activity
+            android:name=".Communication.CommunicationScraggleGameActivity"
+            android:label="@string/title_activity_scraggle_game"
+            android:parentActivityName=".Communication.CommunicationScraggleMainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity" />
+        </activity>
+        <activity
+            android:name=".Communication.CommunicationScraggleGameRules"
+            android:label="@string/title_activity_scraggle_game_rules"
+            android:parentActivityName=".Communication.CommunicationScraggleGameActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity" />
+        </activity>
+
     </application>
 
 </manifest>

@@ -25,7 +25,7 @@ public class CommunicationScraggleMiscFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView =
-                inflater.inflate(R.layout.fragment_scraggle_misc, container, false);
+                inflater.inflate(R.layout.fragment_communication_scraggle_misc, container, false);
 
         scaggleScoreNum = (TextView) rootView.findViewById(R.id.scragglescorenum);
         View buttonMute = rootView.findViewById(R.id.scraggle_button_mute);

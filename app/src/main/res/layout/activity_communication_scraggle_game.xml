@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="edu.neu.madcourse.binodthapachhetry.Scraggle.CommunicationScraggleGameActivity">
+
+    <include layout="@layout/content_scraggle_game" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+        -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Communication.CommunicationScraggleGameActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/scraggle_communication_fragment_misc"
+            class="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMiscFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_communication_scraggle_misc"/>
+
+        <fragment
+            android:id="@+id/scraggle_communication_fragment_game"
+            class="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivityFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/communication_scraggle_large_board"/>
+
+        <fragment
+            android:id="@+id/scraggle_communication_fragment_control"
+            class="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleControlFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_communication_scraggle_control"/>
+
+    </LinearLayout>
+
+</FrameLayout>

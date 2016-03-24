@@ -26,7 +26,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
     private AlertDialog mDialog;
 //    private MediaPlayer mMediaPlayer;
     public Context contextControl;
-    public ScraggleGameActivityFragment mScraggleGame;
+    public CommunicationScraggleGameActivityFragment mScraggleGame;
     private final long startTime = 90 * 1000;
     private final long interval = 1 * 1000;
     public CountDownTimer countDownTimerOne;
@@ -48,7 +48,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView =
-                inflater.inflate(R.layout.fragment_scraggle_control, container, false);
+                inflater.inflate(R.layout.fragment_communication_scraggle_control, container, false);
 
         phaseCounter = (TextView) rootView.findViewById(R.id.scragglephasecount);
        scraggleTimer = (TextView) rootView.findViewById(R.id.scraggletimer);
@@ -83,7 +83,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
                 restartListener.clearWordList();
                 phaseCounter.setText("1");
 
-                ((ScraggleGameActivity) getActivity()).restartGame();
+                ((CommunicationScraggleGameActivity) getActivity()).restartGame();
                 countDownTimerOne = new MyCountDownTimerOne(startTime, interval);
 
                 countDownTimerOne.start();
@@ -97,7 +97,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().finish();
-                Intent myIntent = new Intent(getActivity(), ScraggleMainActivity.class);
+                Intent myIntent = new Intent(getActivity(), CommunicationScraggleMainActivity.class);
 
 //                Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
                 startActivity(myIntent);
@@ -160,7 +160,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
 
 
     public void goBack(){
-        Intent helpIntent = new Intent(getActivity(), ScraggleMainActivity.class);
+        Intent helpIntent = new Intent(getActivity(), CommunicationScraggleMainActivity.class);
         startActivity(helpIntent);
 
     }
@@ -241,7 +241,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
                             restartListener.clearWordList();
                             phaseCounter.setText("1");
 
-                            ((ScraggleGameActivity) getActivity()).restartGame();
+                            ((CommunicationScraggleGameActivity) getActivity()).restartGame();
                             countDownTimerOne = new MyCountDownTimerOne(startTime, interval);
 
                             countDownTimerOne.start();
