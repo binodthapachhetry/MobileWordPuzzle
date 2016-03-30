@@ -1,0 +1,14 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:elevation="@dimen/tictactoe6_elevation_high"
+android:orientation="vertical"
+android:padding="@dimen/tictactoe6_menu_padding"
+tools:context="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleHomeFragment"
+tools:showIn="@layout/activity_TwoPlayerGame_scraggle_home">
+
+
+
+</LinearLayout>
