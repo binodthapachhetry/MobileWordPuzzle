@@ -1,0 +1,7 @@
+dca
+dcb
+dcbname
+dclass
+dcollet
+dcolletage
+dcor

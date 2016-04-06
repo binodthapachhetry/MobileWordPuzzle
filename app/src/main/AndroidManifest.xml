@@ -3,6 +3,9 @@
     package="edu.neu.madcourse.binodthapachhetry">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -84,11 +87,146 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameActivity" />
         </activity>
-        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Communication.CommunicationMain"
+            android:label="@string/title_activity_communication_scraggle_home"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name=".Communication.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.binodthapachhetry" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Communication.GcmIntentService" />
+
+        <activity
+            android:name=".Communication.CommunicationScraggleGameActivity"
+            android:label="@string/title_activity_scraggle_game"
+            android:parentActivityName=".Communication.CommunicationMain"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain" />
+        </activity>
+        <activity
+            android:name=".Communication.CommunicationScraggleGameRules"
+            android:label="@string/title_activity_scraggle_game_rules"
+            android:parentActivityName=".Communication.CommunicationScraggleGameActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity" />
+        </activity>
+
+
+
+
+
+
+
+
+        <activity
+            android:name=".TwoPlayerGame.TwoPlayerGameScraggleMainActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+
+
+        <activity
+            android:name=".TwoPlayerGame.TwoPlayerGameStart"
+            android:label="@string/title_activity_TwoPlayerGame_scraggle_home"
+            android:parentActivityName=".TwoPlayerGame.TwoPlayerGameScraggleMainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity" />
+        </activity>
+
+        <activity
+            android:name=".TwoPlayerGame.TwoPlayerGameRegisterUser"
+            android:label="@string/title_activity_two_player_game_register_user"
+            android:parentActivityName=".TwoPlayerGame.TwoPlayerGameStart"
+            android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart"/>
+    </activity>
+
+
+        <activity
+            android:name=".TwoPlayerGame.TwoPlayerGameReturningUser"
+            android:label="@string/title_activity_two_player_game_returning_user"
+            android:parentActivityName=".TwoPlayerGame.TwoPlayerGameStart"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart" />
+        </activity>
+
+
+        <receiver
+            android:name=".TwoPlayerGame.TwoPlayerGameGcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.binodthapachhetry" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".TwoPlayerGame.TwoPlayerGameGcmIntentService" />
+
+        <service android:name=".TwoPlayerGame.TrackingService" />
+
+
+
+        <activity
+            android:name=".TwoPlayerGame.TwoPlayerGameScraggleGameActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".TwoPlayerGame.TwoPlayerGameReturningUser"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameReturningUser" />
+        </activity>
+
+        <activity
+            android:name=".TwoPlayerGame.TwoPlayerGameScraggleGameRules"
+            android:label="@string/title_activity_scraggle_game_rules"
+            android:parentActivityName=".TwoPlayerGame.TwoPlayerGameScraggleGameActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>

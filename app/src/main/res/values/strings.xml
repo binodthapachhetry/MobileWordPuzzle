@@ -119,6 +119,33 @@ both sides in the larger game.\n\
 
     <string name="scraggle_quit_game">Quit</string>
     <string name="scraggle_game_restart">Play Again</string>
+    <string name="title_activity_communication_scraggle_home">CommunicationScraggleHome</string>
+
+    <string name="communication_scraggle_label">Communication</string>
+    <string name="communication_new_user_hint">Type new username</string>
+    <string name="communication_registered_user_hint">Type username</string>
+    <string name="communication_first_time_user_label"> First time player?</string>
+    <string name="communication_registered_user_button"> Find opponent </string>
+    <string name="communication_new_user_button"> Register </string>
+    <string name="communication_enter_game"> Enter Game </string>
+
+
+    <string name="register">Register</string>
+    <string name="unregister">UnRegister</string>
+    <string name="send_label">Send</string>
+    <string name="clear_label">Clear</string>
+    <string name="google_app_id">1079411293131</string>
+
+    <string name="two_player_scraggle_label">Two Player Word Game</string>
+    <string name="two_player_label">Two Player Scraggle</string>
+    <string name="two_player_play_game_label">Play game</string>
+    <string name="title_activity_TwoPlayerGame_scraggle_home">TwoPlayerGameScraggleHome</string>
+    <string name="title_activity_two_player_game_start">TwoPlayerGameStart</string>
+    <string name="twoplayergame_registered_user_label">Returning Player</string>
+    <string name="twoplayergame_new_user_label">New Player</string>
+    <string name="title_activity_two_player_game_register_user">TwoPlayerGameRegisterUser</string>
+    <string name="twoplayergame_enter_game_button">Go Back to enter As a Registered User</string>
+    <string name="title_activity_two_player_game_returning_user">TwoPlayerGameReturningUser</string>
 
 
 </resources>

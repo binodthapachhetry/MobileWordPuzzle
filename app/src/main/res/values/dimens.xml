@@ -18,7 +18,7 @@
 
     <dimen name="menu_button_margin">2dp</dimen>
 
-    <dimen name="menu_button_padding">2dp</dimen>
+    <dimen name="menu_button_padding">1dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -57,4 +57,6 @@
 
     <dimen name="scraggle_small_board_padding">1dp</dimen>
 
+    <dimen name="communication_text_size">20sp</dimen>
+    <dimen name="twoplayergame_menu_text_size">26sp</dimen>
 </resources>

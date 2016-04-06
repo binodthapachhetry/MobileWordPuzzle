@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.neu.madcourse.binodthapachhetry"
+    android:versionCode="6"
+    android:versionName="6" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for App measurement to run. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:label="@string/about_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:theme="@style/tictactoe6_AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.tictactoe.GameActivity"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.tictactoe.MainActivity"
+            android:theme="@style/tictactoe6_AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".tictactoe.MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Dictionary.DictionaryActivity"
+            android:label="@string/title_activity_dictionary"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameActivity"
+            android:label="@string/title_activity_scraggle_game"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleMainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameRules"
+            android:label="@string/title_activity_scraggle_game_rules"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Scraggle.ScraggleGameActivity" />
+        </activity>
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain"
+            android:label="@string/title_activity_communication_scraggle_home"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="edu.neu.madcourse.binodthapachhetry.Communication.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.Communication" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="edu.neu.madcourse.binodthapachhetry.Communication.GcmIntentService" />
+
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity"
+            android:label="@string/title_activity_scraggle_game"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameRules"
+            android:label="@string/title_activity_scraggle_game_rules"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity" />
+        </activity>
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="edu.neu.madcourse.binodthapachhetry.google_measurement_service"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

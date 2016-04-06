@@ -51,6 +51,7 @@ public class ScraggleTile {
     public void setSubTiles(ScraggleTile[] subTiles) {
         this.mSubTiles = subTiles;
     }
+
     public Owner getOwner(){
         return mOwner;
     }

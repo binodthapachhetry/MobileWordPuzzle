@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".TwoPlayerGame.TwoPlayerGameScraggleGameActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/scraggle_TwoPlayerGame_fragment_misc"
+            class="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMiscFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_twoplayergame_scraggle_misc"/>
+
+        <fragment
+            android:id="@+id/scraggle_TwoPlayerGame_fragment_game"
+            class="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivityFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/twoplayergame_scraggle_large_board"/>
+
+        <fragment
+            android:id="@+id/scraggle_TwoPlayerGame_fragment_control"
+            class="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleControlFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_twoplayergame_scraggle_control"/>
+
+    </LinearLayout>
+
+</FrameLayout>

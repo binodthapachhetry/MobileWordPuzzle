@@ -84,6 +84,27 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
+        // Communication Button
+        View communicationButton = rootView.findViewById(R.id.communication_scraggle_button);
+        communicationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain.class);
+                startActivity(i);
+            }
+        });
+
+
+        // Two player scraggle button
+        View twoPlayerButton = rootView.findViewById(R.id.two_player_scraggle_button);
+        twoPlayerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         // Quit button
         View quitButton = rootView.findViewById(R.id.quit_button);

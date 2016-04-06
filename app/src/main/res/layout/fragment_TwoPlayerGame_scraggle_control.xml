@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="15">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView android:id="@+id/two_player_game_phase"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/scraggle_phase"
+            android:textStyle="bold"
+            android:textSize="@dimen/scraggle_size_large" />
+
+        <TextView android:id="@+id/two_player_game_phasecount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/tictactoe6_red_color"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/two_player_game_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+
+    <Button
+        android:id="@+id/two_player_game_button_pause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dictionary_button_margin"
+        android:text="@string/scraggle_pause"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/two_player_game_button_resume_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dictionary_button_margin"
+        android:text="@string/scraggle_resume"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/two_player_game_button_restart_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dictionary_button_margin"
+        android:text="@string/scraggle_restart"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/two_player_game_button_quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dictionary_button_margin"
+        android:text="@string/scraggle_quit"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>
