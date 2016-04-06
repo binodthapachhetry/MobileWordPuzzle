@@ -97,7 +97,7 @@ public class CommunicationScraggleControlFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().finish();
-                Intent myIntent = new Intent(getActivity(), CommunicationScraggleMainActivity.class);
+                Intent myIntent = new Intent(getActivity(), CommunicationMain.class);
 
 //                Intent helpIntent = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.MainActivity.class);
                 startActivity(myIntent);

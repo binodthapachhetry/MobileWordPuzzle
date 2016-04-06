@@ -55,6 +55,7 @@ public class CommunicationMain extends Activity implements View.OnClickListener 
     Context context;
     public static String regid;
     public static String myName;
+    public static String opponentName;
 
     RemoteClient remoteClient;
     Timer timer;
@@ -151,12 +152,15 @@ public class CommunicationMain extends Activity implements View.OnClickListener 
                             public void onClick(View v) {
                                 Toast.makeText(v.getContext(), "Invited " + userName + " to play! ", Toast.LENGTH_LONG).show();
                                 regid = ID;
+                                opponentName = userName;
                                 sendMessage("Invitation from " + rMessage.getText().toString() + " to play. Pick "+ rMessage.getText().toString() + " in the opponent list to start playing!" );
                                 buttonStart.setEnabled(true);
                                 buttonStart.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity.class);
+//                                        Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity.class);
+                                        Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity.class);
+
                                         startActivity(myIntent);
                                     }
                                 });
@@ -200,6 +204,7 @@ public class CommunicationMain extends Activity implements View.OnClickListener 
             Toast.makeText(this, "Empty Message", Toast.LENGTH_LONG).show();
             return;
         }
+        Log.d(TAG,regid);
 
         new AsyncTask<Void, Void, String>() {
             @Override
@@ -332,7 +337,7 @@ public class CommunicationMain extends Activity implements View.OnClickListener 
             @Override
             protected void onPostExecute(String msg) {
                 removeRegistrationId(getApplicationContext());
-                Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
                 ((TextView) findViewById(R.id.communication_display))
                         .setText(regid);
             }

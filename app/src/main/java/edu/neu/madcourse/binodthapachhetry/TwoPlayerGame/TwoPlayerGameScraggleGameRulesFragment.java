@@ -19,7 +19,7 @@ public class TwoPlayerGameScraggleGameRulesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rulesView = inflater.inflate(R.layout.fragment_TwoPlayerGame_scraggle_game_rules, container, false);
+        View rulesView = inflater.inflate(R.layout.fragment_twoplayergame_scraggle_game_rules, container, false);
 
         return rulesView;
     }

@@ -1,7 +1,6 @@
 package edu.neu.madcourse.binodthapachhetry.TwoPlayerGame;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -18,7 +17,7 @@ import edu.neu.madcourse.binodthapachhetry.R;
 public class TwoPlayerGameScraggleHomeFragment extends Fragment {
     private Context context;
     private Resources resources;
-    RemoteClient remoteClient;
+    TwoPlayerGameRemoteClient remoteClient;
 
 
     public TwoPlayerGameScraggleHomeFragment() {
@@ -31,9 +30,9 @@ public class TwoPlayerGameScraggleHomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         resources = getResources();
 //        final Context contextOnCreate = getContext();
-        remoteClient = new RemoteClient(this.getContext());
+        remoteClient = new TwoPlayerGameRemoteClient(this.getContext());
 
-        View rootView = inflater.inflate(R.layout.fragment_TwoPlayerGame_scraggle_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_twoplayergame_scraggle_home, container, false);
 
 
         final EditText regUserName = (EditText) rootView.findViewById(R.id.registeredusertextBox);

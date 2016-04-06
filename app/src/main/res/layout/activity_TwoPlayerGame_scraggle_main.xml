@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_TwoPlayerGame_scraggle_main" />
+    <include layout="@layout/content_twoplayergame_scraggle_main" />
 
 
 </android.support.design.widget.CoordinatorLayout>

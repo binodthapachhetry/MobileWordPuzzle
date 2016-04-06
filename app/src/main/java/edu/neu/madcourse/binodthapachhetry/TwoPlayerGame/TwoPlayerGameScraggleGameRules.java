@@ -10,7 +10,7 @@ public class TwoPlayerGameScraggleGameRules extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_TwoPlayerGame_scraggle_game_rules);
+        setContentView(R.layout.activity_twoplayergame_scraggle_game_rules);
 
 
 

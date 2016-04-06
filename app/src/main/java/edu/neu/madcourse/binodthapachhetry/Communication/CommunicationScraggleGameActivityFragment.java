@@ -209,7 +209,7 @@ public class CommunicationScraggleGameActivityFragment extends Fragment {
                                 scoreSummary = (scoreSummary + 1);
                                 wfListener.addScores(scoreSummary);
                                 wfListener.addWords(lgTileWords.get(fLarge));
-                                wfListener.sendNotification(lgTileWords.get(fLarge),scoreSummary);
+//                                wfListener.sendNotification(lgTileWords.get(fLarge),scoreSummary);
                                 Log.d("Starting to GCM :", lgTileWords.get(fLarge));
 //                                wfSendListener.sendNotification(lgTileWords.get(fLarge));
                                 wordsFound.add(lgTileWords.get(fLarge));

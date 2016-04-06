@@ -10,7 +10,7 @@
     tools:context="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivity">
 
     <include
-        layout="@layout/TwoPlayerGame_scraggle_large_board"
+        layout="@layout/twoplayergame_scraggle_large_board"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

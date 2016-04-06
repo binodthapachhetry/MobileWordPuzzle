@@ -10,7 +10,7 @@ import android.util.Log;
  * Created by jarvis on 3/21/16.
  */
 public class TwoPlayerGameGcmBroadcastReceiver extends WakefulBroadcastReceiver {
-    private static final String TAG = "GcmBroadcaseReceiver";
+    private static final String TAG = "TPBroadcaseReceiver";
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d(TAG, "called");

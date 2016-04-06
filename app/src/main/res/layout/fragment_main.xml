@@ -15,24 +15,11 @@
 
     android:orientation="vertical"
 
-    android:padding="@dimen/menu_padding"
-
     android:text="@string/about_title"
 
     tools:context="edu.neu.madcourse.binodthapachhetry.MainActivityFragment">
 
 
-    <TextView
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="@dimen/menu_space"
-
-        android:textAppearance="?android:textAppearanceLarge"
-
-        android:textSize="@dimen/menu_text_size"/>
 
 
     <Button
@@ -57,8 +44,13 @@
         android:layout_gravity="center"
 
 
-
         android:text="@string/generate_error_label"/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
 
 
     <Button
@@ -71,7 +63,7 @@
 
         android:layout_gravity="center"
 
-
+        android:layout_weight="1"
 
         android:text="@string/tictactoe_label"/>
 
@@ -84,10 +76,11 @@
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
-
-
+        android:layout_weight="1"
 
         android:text="@string/dictionary_label"/>
+
+</LinearLayout>
 
     <Button
 
@@ -117,6 +110,18 @@
 
         android:text="@string/communication_scraggle_label"/>
 
+    <Button
+
+        android:id="@+id/two_player_scraggle_button"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:text="@string/two_player_scraggle_label"/>
+
 
     <Button
 
@@ -127,8 +132,6 @@
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
-
-
 
         android:text="@string/quit_label"/>
 

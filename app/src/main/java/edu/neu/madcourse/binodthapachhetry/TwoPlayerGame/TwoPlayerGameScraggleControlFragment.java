@@ -48,14 +48,14 @@ public class TwoPlayerGameScraggleControlFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView =
-                inflater.inflate(R.layout.fragment_TwoPlayerGame_scraggle_control, container, false);
+                inflater.inflate(R.layout.fragment_twoplayergame_scraggle_control, container, false);
 
-        phaseCounter = (TextView) rootView.findViewById(R.id.scragglephasecount);
-       scraggleTimer = (TextView) rootView.findViewById(R.id.scraggletimer);
-        final View buttonPause = rootView.findViewById(R.id.scraggle_button_pause);
-        final View buttonResume = rootView.findViewById(R.id.scraggle_button_resume_game);
-        final View buttonRestart = rootView.findViewById(R.id.scraggle_button_restart_game);
-        View buttonQuit = rootView.findViewById(R.id.scraggle_button_quit);
+        phaseCounter = (TextView) rootView.findViewById(R.id.two_player_game_phasecount);
+       scraggleTimer = (TextView) rootView.findViewById(R.id.two_player_game_timer);
+        final View buttonPause = rootView.findViewById(R.id.two_player_game_button_pause);
+        final View buttonResume = rootView.findViewById(R.id.two_player_game_button_resume_game);
+        final View buttonRestart = rootView.findViewById(R.id.two_player_game_button_restart_game);
+        View buttonQuit = rootView.findViewById(R.id.two_player_game_button_quit);
 
         fm = getFragmentManager();
 
@@ -114,7 +114,7 @@ public class TwoPlayerGameScraggleControlFragment extends Fragment {
                 buttonRestart.setEnabled(false);
 
 
-                Fragment f = fm.findFragmentById(R.id.scraggle_fragment_game);
+                Fragment f = fm.findFragmentById(R.id.scraggle_TwoPlayerGame_fragment_game);
                 fm.beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
                         .hide(f)
@@ -140,7 +140,7 @@ public class TwoPlayerGameScraggleControlFragment extends Fragment {
 
                 }
 
-                Fragment f = fm.findFragmentById(R.id.scraggle_fragment_game);
+                Fragment f = fm.findFragmentById(R.id.scraggle_TwoPlayerGame_fragment_game);
                 fm.beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
                         .show(f)

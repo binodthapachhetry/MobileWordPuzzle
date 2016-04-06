@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:title="@string/about_label"
     tools:context="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameRulesFragment"
-    tools:showIn="@layout/activity_TwoPlayerGame_scraggle_game_rules">
+    tools:showIn="@layout/activity_twoplayergame_scraggle_game_rules">
 
 
     <TextView

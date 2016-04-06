@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1">
 
-        <TextView android:id="@+id/scragglephase"
+        <TextView android:id="@+id/two_player_game_phase"
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
             android:textStyle="bold"
             android:textSize="@dimen/scraggle_size_large" />
 
-        <TextView android:id="@+id/scragglephasecount"
+        <TextView android:id="@+id/two_player_game_phasecount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -28,7 +28,7 @@
 
     </LinearLayout>
 
-    <TextView android:id="@+id/scraggletimer"
+    <TextView android:id="@+id/two_player_game_timer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -36,7 +36,7 @@
 
 
     <Button
-        android:id="@+id/scraggle_button_pause"
+        android:id="@+id/two_player_game_button_pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
@@ -44,7 +44,7 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/scraggle_button_resume_game"
+        android:id="@+id/two_player_game_button_resume_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
@@ -52,7 +52,7 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/scraggle_button_restart_game"
+        android:id="@+id/two_player_game_button_restart_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
@@ -60,7 +60,7 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/scraggle_button_quit"
+        android:id="@+id/two_player_game_button_quit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"

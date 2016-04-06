@@ -95,6 +95,17 @@ public class MainActivityFragment extends Fragment {
         });
 
 
+        // Two player scraggle button
+        View twoPlayerButton = rootView.findViewById(R.id.two_player_scraggle_button);
+        twoPlayerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity.class);
+                startActivity(i);
+            }
+        });
+
+
         // Quit button
         View quitButton = rootView.findViewById(R.id.quit_button);
         quitButton.setOnClickListener(new View.OnClickListener() {

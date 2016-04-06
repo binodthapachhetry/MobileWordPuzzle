@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_TwoPlayerGame_scraggle_home" />
+    <include layout="@layout/content_twoplayergame_scraggle_home" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

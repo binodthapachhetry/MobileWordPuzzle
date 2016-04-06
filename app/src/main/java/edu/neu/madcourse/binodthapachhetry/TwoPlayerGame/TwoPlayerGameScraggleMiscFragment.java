@@ -28,18 +28,32 @@ public class TwoPlayerGameScraggleMiscFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView =
-                inflater.inflate(R.layout.fragment_TwoPlayerGame_scraggle_misc, container, false);
+                inflater.inflate(R.layout.fragment_twoplayergame_scraggle_misc, container, false);
 
-        myName = (TextView) rootView.findViewById(R.id.scragglescore);
-        myName.setText(TwoPlayerGameMain.myName);
-        opponentName = (TextView) rootView.findViewById(R.id.opponent_scragglescore);
-        opponentName.setText(TwoPlayerGameMain.opponentName);
+        myName = (TextView) rootView.findViewById(R.id.two_player_game_scragglescore);
+        if (TwoPlayerGameReturningUser.myName != null) {
+            myName.setText(TwoPlayerGameReturningUser.myName);
+        }else{
+            myName.setText(TwoPlayerGameGcmIntentService.myNameFromGCM);
+        }
 
-        scaggleScoreNum = (TextView) rootView.findViewById(R.id.scragglescorenum);
-        opponent_scaggleScoreNum = (TextView) rootView.findViewById(R.id.opponent_scragglescorenum);
+        opponentName = (TextView) rootView.findViewById(R.id.two_player_game_opponent_scragglescore);
+        if (TwoPlayerGameReturningUser.opponentName != null) {
+            opponentName.setText(TwoPlayerGameReturningUser.opponentName);
+        }else{
+            opponentName.setText(TwoPlayerGameGcmIntentService.opponentNameFromGCM);
+        }
 
-        View buttonMute = rootView.findViewById(R.id.scraggle_button_mute);
-        wordLis = (TextView) rootView.findViewById(R.id.scraggleTextViewBox);
+        if (TwoPlayerGameGcmIntentService.opponentScoreFromGCM != null){
+
+        }
+
+        scaggleScoreNum = (TextView) rootView.findViewById(R.id.two_player_game_scragglescorenum);
+
+        opponent_scaggleScoreNum = (TextView) rootView.findViewById(R.id.two_player_game_opponent_scragglescorenum);
+
+        View buttonMute = rootView.findViewById(R.id.two_player_game_button_mute);
+        wordLis = (TextView) rootView.findViewById(R.id.two_player_game_scraggleTextViewBox);
 
         buttonMute.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,14 +22,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import edu.neu.madcourse.binodthapachhetry.Communication.CommunicationConstants;
-import edu.neu.madcourse.binodthapachhetry.Communication.GcmNotification;
-import edu.neu.madcourse.binodthapachhetry.Communication.RemoteClient;
-import edu.neu.madcourse.binodthapachhetry.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,6 +36,11 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import edu.neu.madcourse.binodthapachhetry.Communication.CommunicationConstants;
+import edu.neu.madcourse.binodthapachhetry.Communication.GcmNotification;
+import edu.neu.madcourse.binodthapachhetry.Communication.RemoteClient;
+import edu.neu.madcourse.binodthapachhetry.R;
+
 /**
  * Created by jarvis on 3/22/16.
  */
@@ -45,22 +48,28 @@ public class TwoPlayerGameMain extends Activity implements View.OnClickListener 
     public static final String PROPERTY_REG_ID = "registration_id";
     private static final String PROPERTY_APP_VERSION = "appVersion";
     private static final String TEXT_DISPLAY = "You are registered! Please enter your username and press Find opponent button.";
+    private static final String TAG = "TwoPlayerGameMain";
 
     final Handler handler = new Handler();
 
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    static final String TAG = "GCM Sample Demo";
+    private final static int MIN_DISTANCE = 10;
+    private final static int MIN_TIME = 35000;
     TextView mDisplay;
     EditText rMessage;
     EditText nMessage;
     Button buttonStart;
     GoogleCloudMessaging gcm;
     Context context;
+    Map update;
     public static String regid;
     public static String myName;
     public static String opponentName;
 
-    RemoteClient remoteClient;
+//    public static double longitude;
+//    public static double latitude;
+
+    TwoPlayerGameRemoteClient remoteClient;
     Timer timer;
     TimerTask timerTask;
     HashMap hmap;
@@ -76,57 +85,44 @@ public class TwoPlayerGameMain extends Activity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gcm);
-        remoteClient = new RemoteClient(this);
+        setContentView(R.layout.activity_twoplayergame_gcm);
+        remoteClient = new TwoPlayerGameRemoteClient(this);
         hmap = remoteClient.getHash();
 
-        mDisplay = (TextView) findViewById(R.id.communication_display);
-//        mMessage = (EditText) findViewById(R.id.communication_edit_message);
-        rMessage = (EditText) findViewById(R.id.registeredusertextBox);
-        nMessage = (EditText) findViewById(R.id.newusertextBox);
-        buttonStart = (Button) findViewById(R.id.communication_enter_game);
+        mDisplay = (TextView) findViewById(R.id.twoPlayerGame_display);
+        rMessage = (EditText) findViewById(R.id.twoPlayerGame_registeredusertextBox);
+        nMessage = (EditText) findViewById(R.id.twoPlayerGame_newusertextBox);
+        buttonStart = (Button) findViewById(R.id.twoPlayerGame_enter_game);
         buttonStart.setEnabled(false);
 
-//        buttonStart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent myIntent = new Intent(getApplicationContext(), edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity.class);
-//                startActivity(myIntent);
-//            }
-//        });
-
         gcm = GoogleCloudMessaging.getInstance(this);
-
-
         context = getApplicationContext();
+
+//        Intent service1Intent = new Intent(this, TrackingService.class);
+//        startService(service1Intent);
+
+
+//        LocationListener locationListener = new MyLocationListener();
+//        LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//
+//        lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, locationListener);
 
 
     }
 
     @Override
     public void onClick(final View view) {
-//        if (view == findViewById(R.id.communication_send)) {
-//            String message = ((EditText) findViewById(R.id.communication_edit_message)).getText().toString();
-//            if (message.equals("")) {
-//                Toast.makeText(context, "Sending Message Empty!", Toast.LENGTH_LONG).show();
-//                return;
-//            }
-//            sendMessage(message);
-//        }
 
-//        if (view == findViewById(R.id.communication_clear)) {
-//            mMessage.setText("");
-//        }
-
-//        if (view == findViewById(R.id.communication_unregistor_button)) {
-//            unregister();
-//        }
-
-        if (view == findViewById(R.id.registered_user_button)) {
+        if (view == findViewById(R.id.twoPlayerGame_registered_user_button)) {
             Log.d("Registered button: ",String.valueOf(rMessage.getText().length()));
             if(rMessage.getText().length() != 0){
+
+//                Log.d(TAG, String.valueOf(longitude));
+//                Log.d(TAG, String.valueOf(latitude));
+
+
                 myName = rMessage.getText().toString();
-                RadioGroup opponentsRadioGroup = (RadioGroup) findViewById(R.id.communication_player_list);
+                RadioGroup opponentsRadioGroup = (RadioGroup) findViewById(R.id.twoPlayerGame_player_list);
 //                HashMap hmap = remoteClient.getHash();
 
                 Log.d("HashMap before: ",String.valueOf(hmap.size()));
@@ -161,7 +157,7 @@ public class TwoPlayerGameMain extends Activity implements View.OnClickListener 
                                 buttonStart.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity.class);
+                                        Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity.class);
                                         startActivity(myIntent);
                                     }
                                 });
@@ -179,7 +175,7 @@ public class TwoPlayerGameMain extends Activity implements View.OnClickListener 
 //
 //        }
 
-        if (view == findViewById(R.id.new_user_button)) {
+        if (view == findViewById(R.id.twoPlayerGame_new_user_button)) {
             Log.d("After if view : ",String.valueOf(nMessage.getText().length()));
             if (checkPlayServices()) {
                 Log.d("After if check: ",String.valueOf(nMessage.getText().length()));
@@ -188,7 +184,9 @@ public class TwoPlayerGameMain extends Activity implements View.OnClickListener 
                 if (TextUtils.isEmpty(regid)) {
                     registerInBackground();
                 }else{
-                    remoteClient.saveValue(nMessage.getText().toString(), regid);
+                    Map<String, Object> update = new HashMap<String, Object>();
+                    update.put("regID", regid);
+                    remoteClient.saveValue(nMessage.getText().toString(), update);
                     mDisplay.append(TEXT_DISPLAY);
                     Log.d("savedInFirebase: ", String.valueOf(nMessage.getText().length()));
                 }
@@ -395,6 +393,35 @@ public class TwoPlayerGameMain extends Activity implements View.OnClickListener 
             }
         };
     }
+
+//    private final class MyLocationListener implements LocationListener {
+//
+//        @Override
+//        public void onLocationChanged(Location location) {
+//            // called when the listener is notified with a location update from the GPS
+//            latitude = location.getLatitude();
+//            longitude = location.getLongitude();
+//            Log.d(TAG, String.valueOf(latitude));
+//            Log.d(TAG, String.valueOf(longitude));
+//
+//
+//        }
+//
+//        @Override
+//        public void onProviderDisabled(String provider) {
+//            // called when the GPS provider is turned off (user turning off the GPS on the phone)
+//        }
+//
+//        @Override
+//        public void onProviderEnabled(String provider) {
+//            // called when the GPS provider is turned on (user turning on the GPS on the phone)
+//        }
+//
+//        @Override
+//        public void onStatusChanged(String provider, int status, Bundle extras) {
+//            // called when the status of the GPS provider changes
+//        }
+//    }
 
 
     }

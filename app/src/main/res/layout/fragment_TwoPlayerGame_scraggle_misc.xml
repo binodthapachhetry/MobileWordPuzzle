@@ -11,7 +11,7 @@
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView android:id="@+id/opponent_scragglescore"
+        <TextView android:id="@+id/two_player_game_opponent_scragglescore"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:gravity="center"
@@ -19,7 +19,7 @@
             android:textStyle="bold"
             android:textSize="@dimen/scraggle_size_large"/>
 
-        <TextView android:id="@+id/opponent_scragglescorenum"
+        <TextView android:id="@+id/two_player_game_opponent_scragglescorenum"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <TextView android:id="@+id/scragglescore"
+    <TextView android:id="@+id/two_player_game_scragglescore"
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:gravity="center"
@@ -40,7 +40,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/scraggle_size_large"/>
 
-        <TextView android:id="@+id/scragglescorenum"
+        <TextView android:id="@+id/two_player_game_scragglescorenum"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_weight="1"
@@ -56,7 +56,7 @@
         android:layout_weight="10">
 
         <TextView
-            android:id="@+id/scraggleTextViewBox"
+            android:id="@+id/two_player_game_scraggleTextViewBox"
             android:padding="3dp"
             android:maxLines = "10"
             android:layout_width="match_parent"
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/scraggle_button_mute"
+            android:id="@+id/two_player_game_button_mute"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:clickable="true"

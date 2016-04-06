@@ -7,7 +7,7 @@
     android:elevation="@dimen/tictactoe6_elevation_high"
     android:orientation="vertical"
     android:padding="@dimen/menu_padding"
-    tools:context="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain">
+    tools:context="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameMain">
 
 
 
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1">
     <TextView
-        android:id="@+id/communication_display"
+        android:id="@+id/twoPlayerGame_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/communication_text_size"
@@ -29,7 +29,7 @@
         android:layout_weight="1">
 
         <EditText
-            android:id="@+id/registeredusertextBox"
+            android:id="@+id/twoPlayerGame_registeredusertextBox"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         </EditText>
 
         <Button
-            android:id="@+id/registered_user_button"
+            android:id="@+id/twoPlayerGame_registered_user_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClick"
@@ -50,7 +50,6 @@
             android:text="@string/communication_registered_user_button"
             android:layout_weight="2"/>
 
- ]
     </LinearLayout>
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -58,13 +57,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="3">
         <RadioGroup
-            android:id="@+id/communication_player_list"
+            android:id="@+id/twoPlayerGame_player_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
     </RadioGroup>
     <Button
-        android:id="@+id/communication_enter_game"
+        android:id="@+id/twoPlayerGame_enter_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dictionary_button_margin"
@@ -86,7 +85,7 @@
         android:layout_weight="1">
 
         <EditText
-            android:id="@+id/newusertextBox"
+            android:id="@+id/twoPlayerGame_newusertextBox"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -98,7 +97,7 @@
             android:layout_weight="1">
         </EditText>
         <Button
-            android:id="@+id/new_user_button"
+            android:id="@+id/twoPlayerGame_new_user_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClick"
@@ -113,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="8">
         <TextView
-            android:id="@+id/communication_none"
+            android:id="@+id/twoPlayerGame_communication_none"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>

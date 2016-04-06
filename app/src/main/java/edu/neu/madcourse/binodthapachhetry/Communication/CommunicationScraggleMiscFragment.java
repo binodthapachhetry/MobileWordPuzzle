@@ -16,6 +16,9 @@ public class CommunicationScraggleMiscFragment extends Fragment{
     public String wordsFromBoard;
     TextView wordLis;
     TextView scaggleScoreNum;
+    TextView myName;
+    TextView opponentName;
+    TextView opponent_scaggleScoreNum;
     onTimeEndListener timeListener;
 
     private MediaPlayer mMediaPlayer;
@@ -27,7 +30,14 @@ public class CommunicationScraggleMiscFragment extends Fragment{
         View rootView =
                 inflater.inflate(R.layout.fragment_communication_scraggle_misc, container, false);
 
+        myName = (TextView) rootView.findViewById(R.id.scragglescore);
+        myName.setText(CommunicationMain.myName);
+        opponentName = (TextView) rootView.findViewById(R.id.opponent_scragglescore);
+        opponentName.setText(CommunicationMain.opponentName);
+
         scaggleScoreNum = (TextView) rootView.findViewById(R.id.scragglescorenum);
+        opponent_scaggleScoreNum = (TextView) rootView.findViewById(R.id.opponent_scragglescorenum);
+
         View buttonMute = rootView.findViewById(R.id.scraggle_button_mute);
         wordLis = (TextView) rootView.findViewById(R.id.scraggleTextViewBox);
 
@@ -51,6 +61,10 @@ public class CommunicationScraggleMiscFragment extends Fragment{
         String scoreDisplay = String.valueOf(score);
         scaggleScoreNum.setText(scoreDisplay);
 
+    }
+
+    public void showOpponentScores(String score){
+        opponent_scaggleScoreNum.setText(score);
     }
 
     public interface onRestartButtonClickListener

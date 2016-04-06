@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import edu.neu.madcourse.binodthapachhetry.R;
 
@@ -17,8 +18,10 @@ import edu.neu.madcourse.binodthapachhetry.R;
  */
 public class GcmIntentService extends IntentService {
     public static final int NOTIFICATION_ID = 1;
+    static final String SOME_ACTION = "com.google.android.c2dm.intent.RECEIVE";
     private NotificationManager mNotificationManager;
     private static final String TAG = "GcmIntentService";
+
 
     public GcmIntentService() {
         super("GcmIntentService");
@@ -31,7 +34,9 @@ public class GcmIntentService extends IntentService {
         if (!extras.isEmpty()) {
             String message = extras.getString("message");
             if (message != null) {
-                sendNotification(message);
+                Log.d(TAG, message);
+//                updateMyActivity(getApplicationContext(), message);
+                sendNotificationComm(message);
             }
         }
         // Release the wake lock provided by the WakefulBroadcastReceiver.
@@ -41,13 +46,14 @@ public class GcmIntentService extends IntentService {
     // Put the message into a notification and post it.
     // This is just one simple example of what you might choose to do with
     // a GCM message.
-    public void sendNotification(String message) {
+    public void sendNotificationComm(String message) {
         mNotificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent notificationIntent;
         notificationIntent = new Intent(this,CommunicationMain.class);
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         notificationIntent.putExtra("show_response", "show_response");
-        PendingIntent intent = PendingIntent.getActivity(this, 0, new Intent(this, CommunicationMain.class),PendingIntent.FLAG_UPDATE_CURRENT);
+        Log.d(TAG,"PendingIntent set to CommunicationMain");
+        PendingIntent intent = PendingIntent.getActivity(this, 0, new Intent(this, edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity.class),PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
                 this)
@@ -65,6 +71,18 @@ public class GcmIntentService extends IntentService {
         notification.defaults |= Notification.DEFAULT_VIBRATE;
 
         mNotificationManager.notify(NOTIFICATION_ID, notification);
+    }
+
+    static void updateMyActivity(Context context, String message) {
+
+//        Intent intent = new Intent("unique_name");
+        Intent intent = new Intent(SOME_ACTION);
+
+        //put whatever data you want to send, if any
+        intent.putExtra("message", message);
+
+        //send broadcast
+        context.sendBroadcast(intent);
     }
 
 }

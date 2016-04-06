@@ -25,11 +25,11 @@ public class TwoPlayerGameRemoteClient {
     private static final String MyPREFERENCES = "MyPrefs" ;
 //    private static final String FIREBASE_DB = "https://glowing-heat-7850.firebaseio.com/";
     private static final String FIREBASE_DB = "https://twogameplayer.firebaseio.com/";
-    private static final String TAG = "TwoPlayerGameRemoteClient";
+    private static final String TAG = "TwoPlayerRemoteClient";
     private static boolean isDataChanged = false;
     private Context mContext;
     private HashMap<String, String> fireBaseData = new HashMap<String, String>();
-    final HashMap<String, String> hmap = new HashMap<String, String>();
+    final HashMap<String, HashMap<String, Object>> hmap = new HashMap<String, HashMap<String, Object>>();
 
 
 
@@ -40,9 +40,9 @@ public class TwoPlayerGameRemoteClient {
 
     }
 
-    public HashMap<String, String> getHash() {
+    public HashMap<String, HashMap<String, Object>> getHash() {
 
-
+//        HashMap<String, HashMap<String, Object>> hmap = new HashMap<String, HashMap<String, Object>>();
         Firebase ref = new Firebase(FIREBASE_DB);
         Query queryRef = ref.orderByKey();
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -51,9 +51,12 @@ public class TwoPlayerGameRemoteClient {
                 for (DataSnapshot chld : snapshot.getChildren()) {
                     // snapshot contains the key and value
                     if (chld.getValue() != null) {
+                        HashMap<String, Object> newPost = (HashMap<String, Object>) chld.getValue();
+//                        Log.d(TAG, "Hashmap " + chld.getValue().getClass().getName());
                         // Adding the data to the HashMap
-                        hmap.put(chld.getKey(), chld.getValue().toString());
-                        Log.d(TAG, "Hashmap added " + chld.getKey());
+                        hmap.put(chld.getKey(), newPost);
+                        Log.d(TAG, "Hashmap key added " + chld.getKey().toString());
+                        Log.d(TAG, "Hashmap value added " + newPost.toString());
 
                     } else {
                         Log.d(TAG, "Data Not Received");

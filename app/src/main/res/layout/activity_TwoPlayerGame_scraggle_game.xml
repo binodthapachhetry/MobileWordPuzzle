@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="edu.neu.madcourse.binodthapachhetry.Scraggle.TwoPlayerGameScraggleGameActivity">
-
-    <include layout="@layout/content_scraggle_game" />
-
-</android.support.design.widget.CoordinatorLayout>
-
-        -->
-
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -34,21 +19,21 @@
             class="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMiscFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_TwoPlayerGame_scraggle_misc"/>
+            tools:layout="@layout/fragment_twoplayergame_scraggle_misc"/>
 
         <fragment
             android:id="@+id/scraggle_TwoPlayerGame_fragment_game"
             class="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivityFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout="@layout/TwoPlayerGame_scraggle_large_board"/>
+            tools:layout="@layout/twoplayergame_scraggle_large_board"/>
 
         <fragment
             android:id="@+id/scraggle_TwoPlayerGame_fragment_control"
             class="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleControlFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_TwoPlayerGame_scraggle_control"/>
+            tools:layout="@layout/fragment_twoplayergame_scraggle_control"/>
 
     </LinearLayout>
 

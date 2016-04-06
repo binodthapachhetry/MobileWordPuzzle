@@ -54,6 +54,8 @@ public class TwoPlayerGameScraggleGameActivityFragment extends Fragment {
 
     wordFoundListener wfListener;
 
+
+
     ArrayList<String> lgTileWords = new ArrayList<>(9);
 
     public ArrayList<ArrayList<Integer>> tileSelected = new ArrayList<ArrayList<Integer>>();

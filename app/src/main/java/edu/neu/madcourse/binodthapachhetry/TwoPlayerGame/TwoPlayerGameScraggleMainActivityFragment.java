@@ -24,17 +24,17 @@ public class TwoPlayerGameScraggleMainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_TwoPlayerGame_scraggle_main, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_twoplayergame_scraggle_main, container, false);
 
-        View newGameButton = rootView.findViewById(R.id.scraggle_new_game_button);
-        View buttonRules = rootView.findViewById(R.id.scraggle_button_rules);
-        View acknowledgementButton = rootView.findViewById(R.id.scraggle_acknowledgement_button);
+        View newGameButton = rootView.findViewById(R.id.two_player_scraggle_new_game_button);
+        View buttonRules = rootView.findViewById(R.id.two_player_scraggle_button_rules);
+        View acknowledgementButton = rootView.findViewById(R.id.two_player_scraggle_acknowledgement_button);
 
         // New Game Button
         newGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), TwoPlayerGameScraggleGameActivity.class);
+                Intent intent = new Intent(getActivity(), TwoPlayerGameStart.class);
                 getActivity().startActivity(intent);
             }
         });
