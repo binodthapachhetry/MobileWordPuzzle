@@ -148,4 +148,15 @@ both sides in the larger game.\n\
     <string name="title_activity_two_player_game_returning_user">TwoPlayerGameReturningUser</string>
 
 
+    <string name="trickiest_part_label">Trickiest Part</string>
+    <string name="title_activity_finding_astro_main">FindingAstroMain</string>
+    <string name="finding_astro_label">Finding Astro</string>
+    <string name="finding_astro_accel_label">Accelerometer</string>
+    <string name="finding_astro_rotation_label">Rotation</string>
+    <string name="finding_astro_proximity_label">Proximity</string>
+    <string name="title_activity_finding_astro_accelerometer">FindingAstroAccelerometer</string>
+    <string name="title_activity_finding_astro_rotation_vector">FindingAstroRotationVector</string>
+    <string name="title_activity_proximity">Proximity</string>
+    <string name="title_activity_rotation_vector">RotationVector</string>
+
 </resources>

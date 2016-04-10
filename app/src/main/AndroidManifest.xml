@@ -137,14 +137,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity" />
         </activity>
-
-
-
-
-
-
-
-
         <activity
             android:name=".TwoPlayerGame.TwoPlayerGameScraggleMainActivity"
             android:label="@string/title_activity_scraggle_main"
@@ -154,8 +146,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
         </activity>
-
-
         <activity
             android:name=".TwoPlayerGame.TwoPlayerGameStart"
             android:label="@string/title_activity_TwoPlayerGame_scraggle_home"
@@ -165,18 +155,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity" />
         </activity>
-
         <activity
             android:name=".TwoPlayerGame.TwoPlayerGameRegisterUser"
             android:label="@string/title_activity_two_player_game_register_user"
             android:parentActivityName=".TwoPlayerGame.TwoPlayerGameStart"
             android:theme="@style/AppTheme.NoActionBar">
-        <meta-data
-        android:name="android.support.PARENT_ACTIVITY"
-        android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart"/>
-    </activity>
-
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart" />
+        </activity>
         <activity
             android:name=".TwoPlayerGame.TwoPlayerGameReturningUser"
             android:label="@string/title_activity_two_player_game_returning_user"
@@ -186,7 +173,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart" />
         </activity>
-
 
         <receiver
             android:name=".TwoPlayerGame.TwoPlayerGameGcmBroadcastReceiver"
@@ -200,22 +186,18 @@
         </receiver>
 
         <service android:name=".TwoPlayerGame.TwoPlayerGameGcmIntentService" />
-
         <service android:name=".TwoPlayerGame.TrackingService" />
-
-
 
         <activity
             android:name=".TwoPlayerGame.TwoPlayerGameScraggleGameActivity"
             android:label="@string/title_activity_scraggle_main"
-            android:screenOrientation="landscape"
             android:parentActivityName=".TwoPlayerGame.TwoPlayerGameReturningUser"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameReturningUser" />
         </activity>
-
         <activity
             android:name=".TwoPlayerGame.TwoPlayerGameScraggleGameRules"
             android:label="@string/title_activity_scraggle_game_rules"
@@ -225,8 +207,41 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivity" />
         </activity>
-
-
+        <activity
+            android:name=".FindingAstro.FindingAstroMain"
+            android:label="@string/title_activity_finding_astro_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.VectorActivity"
+            android:parentActivityName=".FindingAstro.FindingAstroMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.FindingAstroRotationVector"
+            android:label="@string/title_activity_finding_astro_rotation_vector"
+            android:parentActivityName=".FindingAstro.FindingAstroMain"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.Proximity"
+            android:label="@string/title_activity_proximity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindingAstro.RotationVector"
+            android:label="@string/title_activity_rotation_vector"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

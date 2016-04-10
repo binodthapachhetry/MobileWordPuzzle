@@ -105,6 +105,16 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
+        // Two player scraggle button
+        View trickiestPartButton = rootView.findViewById(R.id.trickiest_part_button);
+        trickiestPartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain.class);
+                startActivity(i);
+            }
+        });
+
 
         // Quit button
         View quitButton = rootView.findViewById(R.id.quit_button);
