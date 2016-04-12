@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -217,31 +218,43 @@
                 android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
         </activity>
         <activity
-            android:name=".FindingAstro.VectorActivity"
+            android:name=".FindingAstro.FindingAstroAccelerometer"
             android:parentActivityName=".FindingAstro.FindingAstroMain"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
         </activity>
         <activity
-            android:name=".FindingAstro.FindingAstroRotationVector"
-            android:label="@string/title_activity_finding_astro_rotation_vector"
+            android:name=".FindingAstro.skyview_activity"
+            android:label="@string/title_activity_finding_astro_skyview"
             android:parentActivityName=".FindingAstro.FindingAstroMain"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
         </activity>
-        <activity
-            android:name=".FindingAstro.Proximity"
-            android:label="@string/title_activity_proximity"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".FindingAstro.RotationVector"
-            android:label="@string/title_activity_rotation_vector"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_finding_astro_rotation_vector"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+        </activity>
+
+        <activity
+            android:name=".FindingAstro.Rules"
+            android:label="@string/title_activity_rules"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+
+    </activity>
     </application>
 
 </manifest>

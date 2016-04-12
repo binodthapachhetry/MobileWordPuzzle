@@ -154,9 +154,36 @@ both sides in the larger game.\n\
     <string name="finding_astro_accel_label">Accelerometer</string>
     <string name="finding_astro_rotation_label">Rotation</string>
     <string name="finding_astro_proximity_label">Proximity</string>
+    <string name="title_activity_finding_astro_skyview">FindingAstroSkyView</string>
     <string name="title_activity_finding_astro_accelerometer">FindingAstroAccelerometer</string>
     <string name="title_activity_finding_astro_rotation_vector">FindingAstroRotationVector</string>
     <string name="title_activity_proximity">Proximity</string>
     <string name="title_activity_rotation_vector">RotationVector</string>
+    <string name="finding_astro_skyview_label">Sky View</string>
+    <string name="finding_astro_rules_label">Rules</string>
+    <string name="title_activity_rules">Rules</string>
+    <string name="finding_astro_rules">\
+
+        Sky view:
+        \n\
+        1. Hold both the circles with your thumbs to launch the astronaut
+        \n\
+        2. Release your thumb with either of the circles to start a new move/direction
+        \n\
+        \n\
+        Accelerometer:
+        \n\
+        Displays the magnitude and direction (in angles) of the current device movement
+        \n\
+        \n\
+        Rotation:
+        \n\
+        Detects the current rotation vector of the device and vibrates if device is tilted (does not fall under expected orientation)
+        \n\
+
+
+    \n\
+    </string>
+
 
 </resources>
