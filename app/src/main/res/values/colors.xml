@@ -17,4 +17,8 @@
     <color name="tictactoe6_red_color">#ff7f7f</color>
     <color name="tictactoe6_thinking_background_color">#cf716e6e</color>
     <color name="scraggle_text_view_background_color">#f9faf8</color>
+    <color name="score_text_color">#ffffff</color>
+    <color name="button_color">#ffffff</color>
+    <color name="background">#00098f</color>
+
 </resources>

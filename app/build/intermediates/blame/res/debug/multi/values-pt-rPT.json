@@ -919,8 +919,46 @@
                     "startLine": 50,
                     "startColumn": 4,
                     "startOffset": 6897,
+                    "endColumn": 105,
+                    "endOffset": 6998
+                },
+                "from": {
+                    "file": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-pt-rPT/location_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endColumn": 105,
+                        "endOffset": 430
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 7003,
+                    "endColumn": 98,
+                    "endOffset": 7097
+                },
+                "from": {
+                    "file": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-pt-rPT/location_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 230,
+                        "endColumn": 98,
+                        "endOffset": 324
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 7102,
                     "endColumn": 100,
-                    "endOffset": 6993
+                    "endOffset": 7198
                 },
                 "from": {
                     "file": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-pt-rPT/values-pt-rPT.xml",

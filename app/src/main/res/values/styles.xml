@@ -31,6 +31,15 @@
         <item name="android:src">@drawable/tile</item>
     </style>
 
+    <style name="FindingButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:src">@drawable/image_round</item>
+    </style>
+
+
     <style name="ScraggleTileButton">
         <item name="android:layout_width">@dimen/scraggle_tile_size</item>
         <item name="android:layout_height">@dimen/scraggle_tile_size</item>
@@ -46,6 +55,12 @@
         <item name="android:layout_height">100dp</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="android:src">@drawable/image_round</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">#01fbff</item>
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
     </style>
 
 </resources>

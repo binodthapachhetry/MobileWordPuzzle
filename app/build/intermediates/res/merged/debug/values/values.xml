@@ -18,6 +18,7 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="background">#00098f</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -29,6 +30,7 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <color name="button_color">#ffffff</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="colorAccent">#FF4081</color>
@@ -83,6 +85,12 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="place_autocomplete_prediction_primary_text">#212121</color>
+    <color name="place_autocomplete_prediction_primary_text_highlight">#757575</color>
+    <color name="place_autocomplete_prediction_secondary_text">#757575</color>
+    <color name="place_autocomplete_search_hint">#42000000</color>
+    <color name="place_autocomplete_search_text">#DE000000</color>
+    <color name="place_autocomplete_separator">#1F000000</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -93,6 +101,7 @@
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
+    <color name="score_text_color">#ffffff</color>
     <color name="scraggle_text_view_background_color">#f9faf8</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
@@ -135,6 +144,7 @@
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
     <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
+    <declare-styleable name="MapAttrs"><attr format="enum" name="mapType"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="satellite" value="2"/><enum name="terrain" value="3"/><enum name="hybrid" value="4"/></attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/><attr format="boolean" name="ambientEnabled"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
@@ -264,6 +274,7 @@
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="elevation_high">4dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="finding_astro_text_size">30sp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -276,6 +287,16 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="place_autocomplete_button_padding">16dp</dimen>
+    <dimen name="place_autocomplete_powered_by_google_height">40dp</dimen>
+    <dimen name="place_autocomplete_powered_by_google_start">16dp</dimen>
+    <dimen name="place_autocomplete_prediction_height">72dp</dimen>
+    <dimen name="place_autocomplete_prediction_horizontal_margin">16dp</dimen>
+    <dimen name="place_autocomplete_prediction_primary_text">16sp</dimen>
+    <dimen name="place_autocomplete_prediction_secondary_text">14sp</dimen>
+    <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
+    <dimen name="place_autocomplete_progress_size">24dp</dimen>
+    <dimen name="place_autocomplete_separator_start">72dp</dimen>
     <dimen name="scraggle_elevation_low">1dp</dimen>
     <dimen name="scraggle_horizontal_margin">2dp</dimen>
     <dimen name="scraggle_size_large">15sp</dimen>
@@ -302,6 +323,7 @@
     <dimen name="tictactoe6_tile_margin">0dp</dimen>
     <dimen name="tictactoe6_tile_padding">3dp</dimen>
     <dimen name="tictactoe6_tile_size">30dp</dimen>
+    <dimen name="twoplayergame_menu_text_size">26sp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -356,6 +378,7 @@ thapachhetry.b@husky.neu.edu\n\
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="check_rules">Check rules</string>
     <string name="clear_label">Clear</string>
     <string name="common_google_play_services_api_unavailable_text"><ns1:g id="app_name">%1$s</ns1:g> requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
@@ -406,14 +429,56 @@ thapachhetry.b@husky.neu.edu\n\
     <string name="dictionary_hint">Search Text</string>
     <string name="dictionary_home">Return</string>
     <string name="dictionary_label">Dictionary</string>
+    <string name="failed_move">Need to work on your movement speed or direction! Do you want to restart the game ?</string>
+    <string name="finding_astro_accel_label">Accelerometer</string>
+    <string name="finding_astro_description">Finding Astro is a smartphone-based “Exergame” (fitness exercising game) for youth and young children to engage them in short bursts of intense arm-based physical activities. Find an erratic astronaut called “Astro”, who is lost in outer space using your smartphone. Astro can be seen only on your smartphone when moved to the right spatial location. Move your phone in the direction of astronaut’s movements and capture his photograph on your smartphone screen. Capture a set of images of Astro and move to more intense levels. Challenge your friends for short bursts of exercises and see who is the leader. With Finding Astro -  Spot the astronaut, stretch your body, tone your muscles – All with a smartphone </string>
+    <string name="finding_astro_get_in">Let me in</string>
+    <string name="finding_astro_label">Finding Astro</string>
+    <string name="finding_astro_new_user_label">New Player</string>
+    <string name="finding_astro_proximity_label">Proximity</string>
+    <string name="finding_astro_registered_user_label">Returning Player</string>
+    <string name="finding_astro_rotation_label">Rotation</string>
+    <string name="finding_astro_rules">\
+
+        Sky view:
+        \n\
+        1. Hold both the circles with your thumbs to launch the astronaut
+        \n\
+        2. Release your thumb with either of the circles to start a new move/direction
+        \n\
+        \n\
+        Accelerometer:
+        \n\
+        Displays the magnitude and direction (in angles) of the current device movement
+        \n\
+        \n\
+        Rotation:
+        \n\
+        Detects the current rotation vector of the device and vibrates if device is tilted (does not fall under expected orientation)
+        \n\
+
+
+    \n\
+    </string>
+    <string name="finding_astro_rules_label">Rules</string>
+    <string name="finding_astro_skyview_label">Ready to play game</string>
     <string name="generate_error_label">Generate Error</string>
     <string name="google_app_id">1079411293131</string>
     <string name="long_app_name">NUMAD16S-BinodThapaChhetry</string>
     <string name="no_label">NO</string>
     <string name="ok_label">OK</string>
+    <string name="place_autocomplete_clear_button">Clear search</string>
+    <string name="place_autocomplete_search_hint">Search</string>
+    <string name="quit_game">Quit game</string>
     <string name="quit_label">Quit</string>
     <string name="quit_text">Are you sure you want to quit the application?</string>
     <string name="register">Register</string>
+    <string name="restart_game">Restart game</string>
+    <string name="rules">Astro is a NASA astronaut lost in outer space. NASA has sent you on a mission to find him wandering in outer space. Use your smartphone to track him. At each level you will have to spot astro a given number of times. Astro is erratic and can not stay at a place for long. Therefore, you have to be quick and swift</string>
+    <string name="rules_four">Keep holding the buttons until you find Astro. As soon as Astro appears on your screen, release either of the held buttons to confirm that you have found one. Right after that, hold both the buttons quickly to start the second move.\n\
+So get set GO!</string>
+    <string name="rules_three">Next, keep your hands stretched while holding the phone with both the hands. As soon as the astronaut moves, move your device in that direction keeping your hands stretched. An arrow on the top will tell you in which direction you have to move. The green and blue crosshairs will help you kep your phone stable (as shown in the image below)</string>
+    <string name="rules_two">The image above shows your game screen. Astro is right at the center. When you start, he is going to disappear in any random direction. In order to start an dplay the game, make sure you hold both the buttons at the bottom (as shown in the image below).</string>
     <string name="scraggle_acknowledgement_label">Acknowledgement</string>
     <string name="scraggle_acknowledgement_text">\
 
@@ -483,12 +548,35 @@ both sides in the larger game.\n\
     <string name="tictactoe6_restart_label">Restart</string>
     <string name="tictactoe6_title_activity_about">About</string>
     <string name="tictactoe_label">Tic Tac Toe</string>
+    <string name="title_activity_TwoPlayerGame_scraggle_home">TwoPlayerGameScraggleHome</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_communication_scraggle_home">CommunicationScraggleHome</string>
     <string name="title_activity_dictionary">Test Dictionary</string>
+    <string name="title_activity_finding_astro_accelerometer">FindingAstroAccelerometer</string>
+    <string name="title_activity_finding_astro_description">FindingAstro Description</string>
+    <string name="title_activity_finding_astro_main">FindingAstroMain</string>
+    <string name="title_activity_finding_astro_new_user">FindingAstroNewUser</string>
+    <string name="title_activity_finding_astro_ready">FindingAstroReady</string>
+    <string name="title_activity_finding_astro_registered_user">FindingAstroRegisteredUser</string>
+    <string name="title_activity_finding_astro_rotation_vector">FindingAstroRotationVector</string>
+    <string name="title_activity_finding_astro_skyview">FindingAstroSkyView</string>
+    <string name="title_activity_proximity">Proximity</string>
+    <string name="title_activity_rotation_vector">RotationVector</string>
+    <string name="title_activity_rules">Rules</string>
     <string name="title_activity_scraggle_game">ScraggleGameActivity</string>
     <string name="title_activity_scraggle_game_rules">Scraggle Game Rules</string>
     <string name="title_activity_scraggle_main">ScraggleMainActivity</string>
+    <string name="title_activity_two_player_game_register_user">TwoPlayerGameRegisterUser</string>
+    <string name="title_activity_two_player_game_returning_user">TwoPlayerGameReturningUser</string>
+    <string name="title_activity_two_player_game_start">TwoPlayerGameStart</string>
+    <string name="title_finding_astro_challenge">Challenge Page</string>
+    <string name="trickiest_part_label">Trickiest Part</string>
+    <string name="two_player_label">Two Player Scraggle</string>
+    <string name="two_player_play_game_label">Play game</string>
+    <string name="two_player_scraggle_label">Two Player Word Game</string>
+    <string name="twoplayergame_enter_game_button">Go Back to enter As a Registered User</string>
+    <string name="twoplayergame_new_user_label">New Player</string>
+    <string name="twoplayergame_registered_user_label">Returning Player</string>
     <string name="unregister">UnRegister</string>
     <string name="yes_label">YES</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -1451,6 +1539,24 @@ both sides in the larger game.\n\
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="FindingButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:src">@drawable/image_round</item>
+    </style>
+    <style name="HoldButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/image_round</item>
+    </style>
+    <style name="MyEditTextTheme">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">#01fbff</item>
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

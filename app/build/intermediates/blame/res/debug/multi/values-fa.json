@@ -919,8 +919,46 @@
                     "startLine": 50,
                     "startColumn": 4,
                     "startOffset": 6729,
+                    "endColumn": 104,
+                    "endOffset": 6829
+                },
+                "from": {
+                    "file": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-fa/location_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 325,
+                        "endColumn": 104,
+                        "endOffset": 425
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 6834,
+                    "endColumn": 94,
+                    "endOffset": 6924
+                },
+                "from": {
+                    "file": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values-fa/location_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 230,
+                        "endColumn": 94,
+                        "endOffset": 320
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 6929,
                     "endColumn": 100,
-                    "endOffset": 6825
+                    "endOffset": 7025
                 },
                 "from": {
                     "file": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-fa/values-fa.xml",

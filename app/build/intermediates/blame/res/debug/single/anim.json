@@ -1,27 +1,31 @@
 [
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_enter.xml"
-    },
-    {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/vertical_up.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/vertical_up.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_exit.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/return_anim.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/return_anim.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/right_angle_top_right.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/right_angle_top_right.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_in.xml"
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/vertical_down.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/vertical_down.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_in.xml"
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/right_to_left.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/right_to_left.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
@@ -30,6 +34,46 @@
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/left_to_right.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/left_to_right.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/south_east.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/south_east.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_out.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/north_west.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/north_west.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/botton_to_up.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/botton_to_up.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_in.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
@@ -44,15 +88,15 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_in_top.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/south_west.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/south_west.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/north_east.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/anim/north_east.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_out.xml"
-    },
-    {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_out.xml"
-    },
-    {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_out.xml"
     }
 ]

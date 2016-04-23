@@ -1,5 +1,17 @@
 [
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_forward_24dp.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-ldpi/ic_forward_24dp.png"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_crop_free_24dp.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-ldpi/ic_crop_free_24dp.png"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/astro.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-ldpi/astro.png"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_settings_voice_24dp.png",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/generated/res/pngs/debug/drawable-ldpi/ic_settings_voice_24dp.png"
     },

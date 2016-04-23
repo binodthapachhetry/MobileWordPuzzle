@@ -211,11 +211,26 @@
         <activity
             android:name=".FindingAstro.FindingAstroMain"
             android:label="@string/title_activity_finding_astro_main"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".FindingAstro.FindingAstroDescription"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="edu.neu.madcourse.binodthapachhetry.intent.action.Launch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.findingastro_challenge"
+            android:label="@string/title_finding_astro_challenge"
+            android:parentActivityName=".FindingAstro.FindingAstroMain"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
         </activity>
         <activity
             android:name=".FindingAstro.FindingAstroAccelerometer"
@@ -230,31 +245,75 @@
             android:name=".FindingAstro.skyview_activity"
             android:label="@string/title_activity_finding_astro_skyview"
             android:parentActivityName=".FindingAstro.FindingAstroMain"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroRegisteredUser" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.RotationVector"
+            android:label="@string/title_activity_finding_astro_rotation_vector"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
         </activity>
+        <activity
+            android:name=".FindingAstro.Rules"
+            android:label="@string/title_activity_rules"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.FindingAstroReady"
+            android:label="@string/title_activity_finding_astro_ready"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.FindingAstroNewUser"
+            android:label="@string/title_activity_finding_astro_new_user"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroReady" />
+        </activity>
+        <activity
+            android:name=".FindingAstro.FindingAstroRegisteredUser"
+            android:label="@string/title_activity_finding_astro_registered_user"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroReady" />
+        </activity>
+
+        <receiver
+            android:name=".FindingAstro.GCMBroadcastReveiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.binodthapachhetry" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".FindingAstro.GCMIntentService" />
 
         <activity
-            android:name=".FindingAstro.RotationVector"
-            android:label="@string/title_activity_finding_astro_rotation_vector"
-            android:theme="@style/AppTheme.NoActionBar" >
-
+            android:name=".FindingAstro.FindingAstroDescription"
+            android:label="@string/title_activity_finding_astro_description"
+            android:parentActivityName=".FindingAstro.FindingAstroMain"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
         </activity>
-
-        <activity
-            android:name=".FindingAstro.Rules"
-            android:label="@string/title_activity_rules"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
-
-    </activity>
     </application>
 
 </manifest>

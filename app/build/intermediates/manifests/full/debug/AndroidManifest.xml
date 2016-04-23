@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.neu.madcourse.binodthapachhetry"
-    android:versionCode="6"
-    android:versionName="6" >
+    android:versionCode="11"
+    android:versionName="11" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -10,9 +10,15 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for App measurement to run. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -119,30 +125,21 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="edu.neu.madcourse.Communication" />
+                <category android:name="edu.neu.madcourse.binodthapachhetry" />
             </intent-filter>
         </receiver>
 
         <service android:name="edu.neu.madcourse.binodthapachhetry.Communication.GcmIntentService" />
 
         <activity
-            android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity"
-            android:label="@string/title_activity_scraggle_main"
-            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain" />
-        </activity>
-        <activity
             android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity"
             android:label="@string/title_activity_scraggle_game"
-            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleMainActivity" />
+                android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationMain" />
         </activity>
         <activity
             android:name="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameRules"
@@ -152,6 +149,182 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.Communication.CommunicationScraggleGameActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart"
+            android:label="@string/title_activity_TwoPlayerGame_scraggle_home"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleMainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameRegisterUser"
+            android:label="@string/title_activity_two_player_game_register_user"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameReturningUser"
+            android:label="@string/title_activity_two_player_game_returning_user"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameStart" />
+        </activity>
+
+        <receiver
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameGcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.binodthapachhetry" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameGcmIntentService" />
+        <service android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TrackingService" />
+
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivity"
+            android:label="@string/title_activity_scraggle_main"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameReturningUser"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameReturningUser" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameRules"
+            android:label="@string/title_activity_scraggle_game_rules"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.TwoPlayerGame.TwoPlayerGameScraggleGameActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain"
+            android:label="@string/title_activity_finding_astro_main"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="edu.neu.madcourse.binodthapachhetry.intent.action.Launch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.findingastro_challenge"
+            android:label="@string/title_finding_astro_challenge"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroAccelerometer"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.skyview_activity"
+            android:label="@string/title_activity_finding_astro_skyview"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroRegisteredUser" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.RotationVector"
+            android:label="@string/title_activity_finding_astro_rotation_vector"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.Rules"
+            android:label="@string/title_activity_rules"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroReady"
+            android:label="@string/title_activity_finding_astro_ready"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroNewUser"
+            android:label="@string/title_activity_finding_astro_new_user"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroReady" />
+        </activity>
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroRegisteredUser"
+            android:label="@string/title_activity_finding_astro_registered_user"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroReady" />
+        </activity>
+
+        <receiver
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.GCMBroadcastReveiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="edu.neu.madcourse.binodthapachhetry" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.GCMIntentService" />
+
+        <activity
+            android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription"
+            android:label="@string/title_activity_finding_astro_description"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
         </activity>
 
         <provider

@@ -110,7 +110,7 @@ public class MainActivityFragment extends Fragment {
         trickiestPartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain.class);
+                Intent i = new Intent(getActivity(), edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription.class);
                 startActivity(i);
             }
         });

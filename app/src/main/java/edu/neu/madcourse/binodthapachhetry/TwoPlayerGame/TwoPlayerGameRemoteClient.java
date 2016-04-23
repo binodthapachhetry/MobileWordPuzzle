@@ -23,7 +23,6 @@ import java.util.Map;
 public class TwoPlayerGameRemoteClient {
 
     private static final String MyPREFERENCES = "MyPrefs" ;
-//    private static final String FIREBASE_DB = "https://glowing-heat-7850.firebaseio.com/";
     private static final String FIREBASE_DB = "https://twogameplayer.firebaseio.com/";
     private static final String TAG = "TwoPlayerRemoteClient";
     private static boolean isDataChanged = false;
@@ -41,8 +40,6 @@ public class TwoPlayerGameRemoteClient {
     }
 
     public HashMap<String, HashMap<String, Object>> getHash() {
-
-//        HashMap<String, HashMap<String, Object>> hmap = new HashMap<String, HashMap<String, Object>>();
         Firebase ref = new Firebase(FIREBASE_DB);
         Query queryRef = ref.orderByKey();
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -52,7 +49,6 @@ public class TwoPlayerGameRemoteClient {
                     // snapshot contains the key and value
                     if (chld.getValue() != null) {
                         HashMap<String, Object> newPost = (HashMap<String, Object>) chld.getValue();
-//                        Log.d(TAG, "Hashmap " + chld.getValue().getClass().getName());
                         // Adding the data to the HashMap
                         hmap.put(chld.getKey(), newPost);
                         Log.d(TAG, "Hashmap key added " + chld.getKey().toString());
@@ -60,8 +56,6 @@ public class TwoPlayerGameRemoteClient {
 
                     } else {
                         Log.d(TAG, "Data Not Received");
-//                        hmap.put(chld.getKey(), null);
-
                     }
                 }
             }
@@ -114,17 +108,14 @@ public class TwoPlayerGameRemoteClient {
                 if(snapshot.getValue() != null)
                 {
                     Log.d(TAG, "Data Received " + snapshot.getValue().toString());
-
                     // Adding the data to the HashMap
                     fireBaseData.put(snapshot.getKey(), snapshot.getValue().toString());
-
                 }
                 else {
                     Log.d(TAG, "Data Not Received");
                     fireBaseData.put(snapshot.getKey(), null);
 
                 }
-
 
             }
 

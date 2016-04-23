@@ -8,6 +8,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_twoplayergame_scraggle_game.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_twoplayergame_scraggle_game.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
     },
@@ -20,16 +24,24 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_scraggle_main.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_gcm.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_gcm.xml"
-    },
-    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_communication_scraggle_main.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_communication_scraggle_main.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_gcm.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_gcm.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_scraggle_main.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_scraggle_main.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_ready.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_ready.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_two_player_game_register_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_two_player_game_register_user.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
@@ -44,6 +56,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_prediction.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
     },
@@ -56,28 +72,40 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_communication_scraggle_game_rules.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_communication_scraggle_game_rules.xml"
-    },
-    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_communication_scraggle_game_rules.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_communication_scraggle_game_rules.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_communication_scraggle_control.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_communication_scraggle_control.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_rotation_vector.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_rotation_vector.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_twoplayergame_scraggle_main.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_twoplayergame_scraggle_main.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_communication_scraggle_misc.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_communication_scraggle_misc.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_about.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_about.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_two_player_game_returning_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_two_player_game_returning_user.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/list_item.xml",
@@ -88,8 +116,28 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/tictactoe6_fragment_main.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_two_player_game_start.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_two_player_game_start.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_progress.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_twoplayergame_scraggle_control.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_twoplayergame_scraggle_control.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_twoplayergame_scraggle_game.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_twoplayergame_scraggle_game.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_scraggle_game.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_scraggle_game.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_twoplayergame_scraggle_main.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_twoplayergame_scraggle_main.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_communication_scraggle_game.xml",
@@ -104,6 +152,14 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_accelerometer.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_accelerometer.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_rotation_vector.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_rotation_vector.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_scraggle_game.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_scraggle_game.xml"
     },
@@ -112,8 +168,20 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_new_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_new_user.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_twoplayergame_scraggle_home.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_twoplayergame_scraggle_home.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_twoplayergame_scraggle_main.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_twoplayergame_scraggle_main.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
@@ -128,12 +196,20 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/tictactoe6_fragment_control.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_registered_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_registered_user.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_communication_scraggle_game.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_communication_scraggle_game.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_new_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_new_user.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
@@ -156,32 +232,68 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_scraggle_misc.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_two_player_game_register_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_two_player_game_register_user.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_twoplayergame_scraggle_home.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_twoplayergame_scraggle_home.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/twoplayergame_scraggle_large_board.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/twoplayergame_scraggle_large_board.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_twoplayergame_scraggle_game_rules.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_twoplayergame_scraggle_game_rules.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_fragment.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_proximity.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_proximity.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_communication_scraggle_home.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_communication_scraggle_home.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_description.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_description.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/tictactoe6_large_board.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/tictactoe6_large_board.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/tictactoe6_large_board.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/tictactoe6_large_board.xml"
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/skyview.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/skyview.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/scraggle_large_board.xml",
@@ -192,24 +304,36 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_twoplayergame_gcm.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_twoplayergame_gcm.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_twoplayergame_scraggle_misc.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_twoplayergame_scraggle_misc.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/tictactoe6_thinking.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/tictactoe6_thinking.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
-    },
-    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_communication_scraggle_game_rules.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_communication_scraggle_game_rules.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_communication_scraggle_main.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_communication_scraggle_main.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_findingastro_challenge.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_findingastro_challenge.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
@@ -220,6 +344,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_twoplayergame_scraggle_game_rules.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_twoplayergame_scraggle_game_rules.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
     },
@@ -228,12 +356,36 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_about.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_two_player_game_returning_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_two_player_game_returning_user.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_registered_user.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_registered_user.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/fragment_twoplayergame_scraggle_game_rules.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/fragment_twoplayergame_scraggle_game_rules.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_twoplayergame_scraggle_game.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_twoplayergame_scraggle_game.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/dictionary_buttons.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/dictionary_buttons.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_rules.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_rules.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_rotation_vector.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_rotation_vector.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_scraggle_main.xml",
@@ -264,6 +416,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_communication_scraggle_main.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_main.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_main.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
     },
@@ -284,8 +440,32 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_rules.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_rules.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_two_player_game_start.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_two_player_game_start.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_main.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_main.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_twoplayergame_scraggle_home.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_twoplayergame_scraggle_home.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_communication_scraggle_game_rules.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_communication_scraggle_game_rules.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_score.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_score.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_description.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_description.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/tictactoe6_fragment_game.xml",
@@ -300,8 +480,16 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/twoplayergame_scraggle_small_board.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/twoplayergame_scraggle_small_board.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_rotation_vector.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_rotation_vector.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
@@ -320,12 +508,12 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_dictionary.xml"
     },
     {
-        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_communication_scraggle_home.xml",
-        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_communication_scraggle_home.xml"
-    },
-    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_main.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_main.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_communication_scraggle_home.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_communication_scraggle_home.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
@@ -352,6 +540,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/scraggle_small_board.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_proximity.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_proximity.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
@@ -360,8 +552,16 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_dictionary.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/activity_finding_astro_ready.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/activity_finding_astro_ready.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/content_finding_astro_accelerometer.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/layout/content_finding_astro_accelerometer.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
