@@ -60,4 +60,5 @@
     <dimen name="communication_text_size">20sp</dimen>
     <dimen name="finding_astro_text_size">30sp</dimen>
     <dimen name="twoplayergame_menu_text_size">26sp</dimen>
+    <dimen name="finding_astro_description_size">13sp</dimen>
 </resources>

@@ -28,18 +28,6 @@ public class FindingAstroMain extends AppCompatActivity implements View.OnClickL
         };
 
 
-        if (view == findViewById(R.id.finding_astro_accel_button)){
-            Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroAccelerometer.class);
-            startActivity(myIntent);
-        };
-
-
-        if (view == findViewById(R.id.finding_astro_rotation_button)){
-            Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.FindingAstro.RotationVector.class);
-            startActivity(myIntent);
-
-        };
-
         if (view == findViewById(R.id.finding_astro_rules_button)){
             Intent myIntent = new Intent(getApplicationContext(),edu.neu.madcourse.binodthapachhetry.FindingAstro.Rules.class);
             startActivity(myIntent);

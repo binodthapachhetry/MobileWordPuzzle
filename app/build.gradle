@@ -8,8 +8,8 @@ android {
         applicationId "edu.neu.madcourse.binodthapachhetry"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 11
-        versionName "11"
+        versionCode 13
+        versionName "13"
     }
     buildTypes {
         release {

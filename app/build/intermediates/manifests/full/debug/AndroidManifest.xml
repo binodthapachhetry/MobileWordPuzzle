@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.neu.madcourse.binodthapachhetry"
-    android:versionCode="11"
-    android:versionName="11" >
+    android:versionCode="13"
+    android:versionName="13" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -13,7 +13,9 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for App measurement to run. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Optional permission for App measurement to run. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature
@@ -225,12 +227,6 @@
             android:label="@string/title_activity_finding_astro_main"
             android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="edu.neu.madcourse.binodthapachhetry.intent.action.Launch" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
@@ -320,11 +316,17 @@
         <activity
             android:name="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription"
             android:label="@string/title_activity_finding_astro_description"
-            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain"
+            android:parentActivityName="edu.neu.madcourse.binodthapachhetry.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="edu.neu.madcourse.binodthapachhetry.intent.action.Launch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
         </activity>
 
         <provider

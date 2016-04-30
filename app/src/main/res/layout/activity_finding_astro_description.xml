@@ -26,7 +26,7 @@
             android:id="@+id/finding_astro_display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/communication_text_size"
+            android:textSize="@dimen/finding_astro_description_size"
             android:text="@string/finding_astro_description"
             android:textColor="@color/tictactoe6_purple_color"
             android:layout_weight="1"/>

@@ -62,16 +62,16 @@ public final class R {
 		public static final int place_autocomplete_separator = 0x7f0d004e;
 	}
 	public static final class dimen {
-		public static final int place_autocomplete_button_padding = 0x7f0a0077;
-		public static final int place_autocomplete_powered_by_google_height = 0x7f0a0078;
-		public static final int place_autocomplete_powered_by_google_start = 0x7f0a0079;
-		public static final int place_autocomplete_prediction_height = 0x7f0a007a;
-		public static final int place_autocomplete_prediction_horizontal_margin = 0x7f0a007b;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f0a007c;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f0a007d;
-		public static final int place_autocomplete_progress_horizontal_margin = 0x7f0a007e;
-		public static final int place_autocomplete_progress_size = 0x7f0a007f;
-		public static final int place_autocomplete_separator_start = 0x7f0a0080;
+		public static final int place_autocomplete_button_padding = 0x7f0a0078;
+		public static final int place_autocomplete_powered_by_google_height = 0x7f0a0079;
+		public static final int place_autocomplete_powered_by_google_start = 0x7f0a007a;
+		public static final int place_autocomplete_prediction_height = 0x7f0a007b;
+		public static final int place_autocomplete_prediction_horizontal_margin = 0x7f0a007c;
+		public static final int place_autocomplete_prediction_primary_text = 0x7f0a007d;
+		public static final int place_autocomplete_prediction_secondary_text = 0x7f0a007e;
+		public static final int place_autocomplete_progress_horizontal_margin = 0x7f0a007f;
+		public static final int place_autocomplete_progress_size = 0x7f0a0080;
+		public static final int place_autocomplete_separator_start = 0x7f0a0081;
 	}
 	public static final class drawable {
 		public static final int common_full_open_on_phone = 0x7f020048;

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -23,6 +25,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.location.LocationServices;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -53,10 +56,12 @@ public class FindingAstroRegisteredUser extends AppCompatActivity implements Vie
     public static String opponentName;
 
     private static String yourLevel;
+    public static int myLevel;
 
     GoogleCloudMessaging gcm;
     Button enterGameButton;
     Button findOpponentButton;
+    Button singlePlayerButton;
     EditText rMessage;
     Context context;
     TextView mDisplay;
@@ -77,6 +82,7 @@ public class FindingAstroRegisteredUser extends AppCompatActivity implements Vie
 
         mDisplay = (TextView) findViewById(R.id.finding_astro_text_view);
         rMessage = (EditText) findViewById(R.id.finding_astro_registeredusertextBox);
+        singlePlayerButton = (Button) findViewById(R.id.finding_astro_single_player);
         findOpponentButton = (Button) findViewById(R.id.finding_astro_registered_user_button);
         enterGameButton = (Button) findViewById(R.id.finding_astro_enter_game);
         enterGameButton.setEnabled(false);
@@ -96,79 +102,102 @@ public class FindingAstroRegisteredUser extends AppCompatActivity implements Vie
 
     @Override
     public void onClick(View view) {
+
+        if(view == findViewById(R.id.finding_astro_single_player)){
+            if (rMessage.getText().length() != 0) {
+                myName = rMessage.getText().toString();
+                Intent myIntent = new Intent(getApplicationContext(), edu.neu.madcourse.binodthapachhetry.FindingAstro.skyview_activity.class);
+                startActivity(myIntent);
+            }
+        }
         if (view == findViewById(R.id.finding_astro_registered_user_button)) {
             if (rMessage.getText().length() != 0) {
                 myName = rMessage.getText().toString();
+                if(isOnline()) {
 
-                if (hMap.size() <= 1) {
-                    mDisplay.setText(TEXT_VIEW_ALTERNATIVE);
+                    if (hMap.size() <= 1) {
+                        mDisplay.setText(TEXT_VIEW_ALTERNATIVE);
 
-                } else {
-                    mDisplay.setText(TEXT_VIEW);
-                    RadioGroup opponentsRadioGroup = (RadioGroup) findViewById(R.id.finding_astro_player_list);
+                    } else {
+                        mDisplay.setText(TEXT_VIEW);
+                        RadioGroup opponentsRadioGroup = (RadioGroup) findViewById(R.id.finding_astro_player_list);
 
-                    hMap.remove(rMessage.getText().toString());
+                        hMap.remove(rMessage.getText().toString());
 
 
-                    HashMap<String, HashMap<String, Object>> newHash = (HashMap<String, HashMap<String, Object>>) hMap;
+                        HashMap<String, HashMap<String, Object>> newHash = (HashMap<String, HashMap<String, Object>>) hMap;
 
-                    int radioButtonID = 0;
+                        int radioButtonID = 0;
 
-                    Iterator<Map.Entry<String, HashMap<String, Object>>> iterator = newHash.entrySet().iterator();
+                        Iterator<Map.Entry<String, HashMap<String, Object>>> iterator = newHash.entrySet().iterator();
 
-                    TreeMap<Double, String> tempTree = new TreeMap<Double, String>();
+                        TreeMap<Double, String> tempTree = new TreeMap<Double, String>();
 
-                    while (iterator.hasNext()) {
+                        while (iterator.hasNext()) {
 
-                        Map.Entry<String, HashMap<String, Object>> entry = (Map.Entry<String, HashMap<String, Object>>) iterator.next();
-                        if (!opponentKeys.contains(entry.getKey().toString())) {
-                            Log.d(TAG, String.valueOf(entry.getKey()));
-                            String tempKey = entry.getKey().toString();
+                            Map.Entry<String, HashMap<String, Object>> entry = (Map.Entry<String, HashMap<String, Object>>) iterator.next();
+                            if (!opponentKeys.contains(entry.getKey().toString())) {
+                                Log.d(TAG, String.valueOf(entry.getKey()));
+                                String tempKey = entry.getKey().toString();
 
-                            HashMap<String, Object> tempMap = (HashMap<String, Object>) entry.getValue();
-                            for (Map.Entry<String, Object> entryIn : tempMap.entrySet()) {
-                                if (entryIn.getKey().toString() == REG_ID) {
-                                    yourRegID = (String) entryIn.getValue();
+                                HashMap<String, Object> tempMap = (HashMap<String, Object>) entry.getValue();
+                                for (Map.Entry<String, Object> entryIn : tempMap.entrySet()) {
+                                    if (entryIn.getKey().toString() == REG_ID) {
+                                        yourRegID = (String) entryIn.getValue();
+                                    }
+                                    if (entryIn.getKey().toString() == LEVEL) {
+                                        yourLevel = String.valueOf(entryIn.getValue());
+                                    }
                                 }
-                                if (entryIn.getKey().toString() == LEVEL) {
-                                    yourLevel = String.valueOf(entryIn.getValue());
+
+                                opponentKeys.add(tempKey);
+                                RadioButton radioButton = new RadioButton(this);
+                                radioButton.setId(radioButtonID);
+                                radioButton.setText(tempKey + " Level: " + String.valueOf(yourLevel));
+                                final String userName = tempKey;
+                                final String ID = yourRegID;
+                                radioButtonID++;
+                                opponentsRadioGroup.addView(radioButton);
+                                Log.d("Added button: ", userName);
+
+                                radioButton.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Toast.makeText(v.getContext(), "Invited " + userName + " to play! ", Toast.LENGTH_LONG).show();
+                                        regid = ID;
+                                        opponentName = userName;
+                                        sendMessage("Invitation from " + rMessage.getText().toString() + " to play Finding Astro!");
+                                        enterGameButton.setEnabled(true);
+                                        findOpponentButton.setEnabled(false);
+
+                                        enterGameButton.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                Intent myIntent = new Intent(getApplicationContext(), edu.neu.madcourse.binodthapachhetry.FindingAstro.skyview_activity.class);
+                                                startActivity(myIntent);
+                                            }
+                                        });
+                                    }
+                                });
+
+
+                            } else {
+                                Log.d(TAG, "Myself " + String.valueOf(entry.getKey()));
+                                String tempKey = entry.getKey().toString();
+
+                                HashMap<String, Object> tempMap = (HashMap<String, Object>) entry.getValue();
+                                for (Map.Entry<String, Object> entryIn : tempMap.entrySet()) {
+                                    if (entryIn.getKey().toString() == LEVEL) {
+                                        myLevel = (Integer) entryIn.getValue();
+                                    }
                                 }
                             }
-
-                            opponentKeys.add(tempKey);
-                            RadioButton radioButton = new RadioButton(this);
-                            radioButton.setId(radioButtonID);
-                            radioButton.setText(tempKey + " Level: " + String.valueOf(yourLevel));
-                            final String userName = tempKey;
-                            final String ID = yourRegID;
-                            radioButtonID++;
-                            opponentsRadioGroup.addView(radioButton);
-                            Log.d("Added button: ", userName);
-
-                            radioButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Toast.makeText(v.getContext(), "Invited " + userName + " to play! ", Toast.LENGTH_LONG).show();
-                                    regid = ID;
-                                    opponentName = userName;
-                                    sendMessage("Invitation from " + rMessage.getText().toString() + " to play Finding Astro!");
-                                    enterGameButton.setEnabled(true);
-                                    findOpponentButton.setEnabled(false);
-
-                                    enterGameButton.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View view) {
-                                            Intent myIntent = new Intent(getApplicationContext(), edu.neu.madcourse.binodthapachhetry.FindingAstro.skyview_activity.class);
-                                            startActivity(myIntent);
-                                        }
-                                    });
-                                }
-                            });
-
-
                         }
-                    }
 
+                    }
+                }else{
+                    Log.d(TAG,"NO CONNECTIVITY");
+                    Toast.makeText(getApplicationContext(),"Please check your internet connection!",Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -206,4 +235,19 @@ public class FindingAstroRegisteredUser extends AppCompatActivity implements Vie
         }.execute(null, null, null);
 
     }
+
+
+    public boolean isOnline() {
+
+        Runtime runtime = Runtime.getRuntime();
+        try {
+
+            Process ipProcess = runtime.exec("/system/bin/ping -c 1 8.8.8.8");
+            int     exitValue = ipProcess.waitFor();
+            return (exitValue == 0);
+
+        } catch (IOException e)          { e.printStackTrace(); }
+        catch (InterruptedException e) { e.printStackTrace(); }
+
+        return false; }
 }

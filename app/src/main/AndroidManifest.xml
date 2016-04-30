@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -213,11 +214,7 @@
             android:label="@string/title_activity_finding_astro_main"
             android:parentActivityName=".FindingAstro.FindingAstroDescription"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="edu.neu.madcourse.binodthapachhetry.intent.action.Launch" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -308,11 +305,16 @@
         <activity
             android:name=".FindingAstro.FindingAstroDescription"
             android:label="@string/title_activity_finding_astro_description"
-            android:parentActivityName=".FindingAstro.FindingAstroMain"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="edu.neu.madcourse.binodthapachhetry.intent.action.Launch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroMain" />
+                android:value="edu.neu.madcourse.binodthapachhetry.MainActivity" />
         </activity>
     </application>
 

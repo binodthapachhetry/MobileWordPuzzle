@@ -486,13 +486,13 @@ public final class R {
 		public static final int design_tab_text_size_2line = 0x7f0a0062;
 		public static final int disabled_alpha_material_dark = 0x7f0a0066;
 		public static final int disabled_alpha_material_light = 0x7f0a0067;
-		public static final int highlight_alpha_material_colored = 0x7f0a006b;
-		public static final int highlight_alpha_material_dark = 0x7f0a006c;
-		public static final int highlight_alpha_material_light = 0x7f0a006d;
-		public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a006e;
-		public static final int notification_large_icon_height = 0x7f0a0074;
-		public static final int notification_large_icon_width = 0x7f0a0075;
-		public static final int notification_subtext_size = 0x7f0a0076;
+		public static final int highlight_alpha_material_colored = 0x7f0a006c;
+		public static final int highlight_alpha_material_dark = 0x7f0a006d;
+		public static final int highlight_alpha_material_light = 0x7f0a006e;
+		public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a006f;
+		public static final int notification_large_icon_height = 0x7f0a0075;
+		public static final int notification_large_icon_width = 0x7f0a0076;
+		public static final int notification_subtext_size = 0x7f0a0077;
 	}
 	public static final class drawable {
 		public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;
@@ -604,10 +604,10 @@ public final class R {
 		public static final int customPanel = 0x7f0e005a;
 		public static final int decor_content_parent = 0x7f0e0063;
 		public static final int default_activity_button = 0x7f0e004b;
-		public static final int design_menu_item_action_area = 0x7f0e00d2;
-		public static final int design_menu_item_action_area_stub = 0x7f0e00d1;
-		public static final int design_menu_item_text = 0x7f0e00d0;
-		public static final int design_navigation_view = 0x7f0e00cf;
+		public static final int design_menu_item_action_area = 0x7f0e00d1;
+		public static final int design_menu_item_action_area_stub = 0x7f0e00d0;
+		public static final int design_menu_item_text = 0x7f0e00cf;
+		public static final int design_navigation_view = 0x7f0e00ce;
 		public static final int disableHome = 0x7f0e000e;
 		public static final int edit_query = 0x7f0e0067;
 		public static final int end = 0x7f0e0020;
@@ -637,7 +637,7 @@ public final class R {
 		public static final int middle = 0x7f0e0031;
 		public static final int mini = 0x7f0e002f;
 		public static final int multiply = 0x7f0e0026;
-		public static final int navigation_header_container = 0x7f0e00ce;
+		public static final int navigation_header_container = 0x7f0e00cd;
 		public static final int never = 0x7f0e003a;
 		public static final int none = 0x7f0e0010;
 		public static final int normal = 0x7f0e000c;
@@ -669,8 +669,8 @@ public final class R {
 		public static final int showCustom = 0x7f0e0011;
 		public static final int showHome = 0x7f0e0012;
 		public static final int showTitle = 0x7f0e0013;
-		public static final int snackbar_action = 0x7f0e00cd;
-		public static final int snackbar_text = 0x7f0e00cc;
+		public static final int snackbar_action = 0x7f0e00cc;
+		public static final int snackbar_text = 0x7f0e00cb;
 		public static final int snap = 0x7f0e0019;
 		public static final int spacer = 0x7f0e0050;
 		public static final int split_action_bar = 0x7f0e0008;

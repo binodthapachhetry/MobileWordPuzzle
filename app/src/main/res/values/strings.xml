@@ -126,6 +126,7 @@ both sides in the larger game.\n\
     <string name="communication_registered_user_hint">Type username</string>
     <string name="communication_first_time_user_label"> First time player?</string>
     <string name="communication_registered_user_button"> Find opponent </string>
+    <string name="communication_single_player_button"> Play Single Player </string>
     <string name="communication_new_user_button"> Register </string>
     <string name="communication_enter_game"> Enter Game </string>
 
@@ -204,5 +205,6 @@ So get set GO!</string>
     <string name="title_activity_finding_astro_description">FindingAstro Description</string>
     <string name="finding_astro_description">Finding Astro is a smartphone-based “Exergame” (fitness exercising game) for youth and young children to engage them in short bursts of intense arm-based physical activities. Find an erratic astronaut called “Astro”, who is lost in outer space using your smartphone. Astro can be seen only on your smartphone when moved to the right spatial location. Move your phone in the direction of astronaut’s movements and capture his photograph on your smartphone screen. Capture a set of images of Astro and move to more intense levels. Challenge your friends for short bursts of exercises and see who is the leader. With Finding Astro -  Spot the astronaut, stretch your body, tone your muscles – All with a smartphone </string>
     <string name="finding_astro_get_in">Let me in</string>
+    <string name="final_project_label">Final Project</string>
 
 </resources>

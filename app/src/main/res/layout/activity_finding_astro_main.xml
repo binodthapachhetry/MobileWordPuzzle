@@ -25,24 +25,6 @@
         android:onClick="onClick"
         android:text="@string/finding_astro_skyview_label" />
 
-
-    <Button
-        android:id="@+id/finding_astro_accel_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tictactoe6_menu_button_margin"
-        android:padding="@dimen/tictactoe6_menu_button_padding"
-        android:onClick="onClick"
-        android:text="@string/finding_astro_accel_label"/>
-
-    <Button
-        android:id="@+id/finding_astro_rotation_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dictionary_button_margin"
-        android:onClick="onClick"
-        android:text="@string/finding_astro_rotation_label" />
-
     <Button
         android:id="@+id/finding_astro_rules_button"
         android:layout_width="match_parent"

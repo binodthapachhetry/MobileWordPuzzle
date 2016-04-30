@@ -28,7 +28,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -42,10 +44,18 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
 
     private static final String TAG = "skyview_activity";
     private static final String SCORE = " SCORE: ";
+    private static final String LEVEL = "level";
     private static final float maxAcceleration = 5;
     private static final float minAcceleration = 2;
     private static int score = 0;
-    private static int level = 0;
+    private static int level;
+    private static int currentLevel = 0;
+
+    Map<String, Object> updates;
+    private static String name;
+    FindingAstroRemoteClient remoteClient;
+
+    public int add_counter = 0;
 
     Float azimut;
     Float roll;
@@ -61,8 +71,9 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
 
     Vibrator vibrator;
 
-    boolean button_left = false;
-    boolean button_right = false;
+    public boolean button_left = false;
+    public boolean button_right = false;
+    //public boolean boolean_timer = false;
 
     // View to draw a compass
     public class CustomDrawableView extends View {
@@ -123,6 +134,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
     ImageView arrow_Right;
 
     Timer timer;
+    Timer timer_wait;
 
     ImageButton holdButton_left;
     ImageButton holdButton_right;
@@ -141,6 +153,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
 
     ImageView astroImage;
     TextView scoreText;
+    TextView levelText;
     Animation left_to_right_animation, right_to_left_animation, vertical_up_animation,
             vertical_down_animation, south_east_animation, south_west_animation,
             north_east_animation, north_west_animation, return_anim;
@@ -158,8 +171,16 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
         setContentView(R.layout.skyview);
 
         scoreText = (TextView) findViewById(R.id.snap_score);
+        levelText = (TextView) findViewById(R.id.current_level);
+
+        level = FindingAstroRegisteredUser.myLevel;
 
         lpfAccelSmoothing = new LowPassFilterSmoothing();
+
+        remoteClient = new FindingAstroRemoteClient(this);
+
+        updates = new HashMap<String, Object>();
+        name = FindingAstroRegisteredUser.myName;
 
         //********UI elements **********
         astroImage = (ImageView)findViewById(R.id.astro);
@@ -255,12 +276,14 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
                         button_left= true;
                         if (button_right == true){
                             startTimer_main();
+                            //waitTimer();
                         }
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
                         button_left = false;
 //                        startTimer();
+                       // boolean_timer = false;
                         break;
                     }
                 }
@@ -278,12 +301,15 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
 
                         if (button_left == true){
                             startTimer_main();
+                           // waitTimer();
                         }
 
                         break;
                     case MotionEvent.ACTION_UP:
                         Log.d("ACTION_UP", "LIFTED");
                         button_right = true;
+                       //
+                       // boolean_timer = false;
 //                        startTimer();
                         break;
                 }
@@ -301,7 +327,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
         mMediaPlayer.start();
         mSensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_UI);
         mSensorManager.registerListener(this, magnetometer, SensorManager.SENSOR_DELAY_UI);
-        mSensorManager.registerListener(this,linearAccelerometer, SensorManager.SENSOR_DELAY_UI);
+        mSensorManager.registerListener(this, linearAccelerometer, SensorManager.SENSOR_DELAY_UI);
     }
 
     @Override
@@ -311,6 +337,10 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
         mMediaPlayer.stop();
         mMediaPlayer.reset();
         mMediaPlayer.release();
+        if(currentLevel > level){
+            updates.put(LEVEL, currentLevel);
+            remoteClient.saveValue(name, updates);
+        }
     }
 
     @Override
@@ -323,6 +353,10 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
         mMediaPlayer.stop();
         mMediaPlayer.reset();
         mMediaPlayer.release();
+        if(currentLevel > level){
+            updates.put(LEVEL, currentLevel);
+            remoteClient.saveValue(name, updates);
+        }
 
     }
 
@@ -336,6 +370,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
                     @Override
                     public void run() {
                         randomNumber = random.nextInt(AnimArraySize - 1);
+//                        randomNumber = 1;
                         astroImage.startAnimation(animationArray.get(randomNumber));
 
                         currentXdirection = xDirection.get(randomNumber);
@@ -347,7 +382,12 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
                         arrow_Right.setVisibility(View.VISIBLE);
                         Log.d("TIMER", "RUNNING");
                         stoptimertask();
+                       // waitTimer();
                         startTimer_moveTime();
+                        /*if (boolean_timer == true){
+                            startTimer_moveTime();
+                        }*/
+
                     }
                 });
                 Log.d("TIMER", "STOPPED");
@@ -361,30 +401,17 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
             timer.cancel();
             Log.d("STOPPED", "TIMER STOPPED");
             timer = null;
+            //boolean_timer = false;
         }
     }
 
-    public void startTimer(){
-        timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        astroImage.startAnimation(left_to_right_animation);
-                        arrow_Right.setVisibility(View.VISIBLE);
-
-
-                        Log.d("TIMER", "RUNNING");
-                        stoptimertask();
-                    }
-                });
-
-                Log.d("TIMER", "STOPPED");
-            }
-        }, 5000, 10000);
-        arrow_Right.setVisibility(View.GONE);
+    public void stoptimertask_wait() {
+        if (timer_wait != null) {
+            timer_wait.cancel();
+            Log.d("STOPPED", "TIMER STOPPED");
+            timer_wait = null;
+            //boolean_timer = false;
+        }
     }
 
 
@@ -397,67 +424,102 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
                     @Override
                     public void run() {
 
-                        if(accelerMag.isEmpty()) {
+                        if (accelerMag.isEmpty()) {
                             Toast.makeText(getApplicationContext(), "Time's up for the move", Toast.LENGTH_LONG).show();
-                        }else {
+                        } else {
 
                             float maximum = Collections.max(accelerMag);
                             float max = accelerMag.get(0);
                             int index = 0;
 
-                            for(int i = 0; i < accelerMag.size(); i++) {
+                            for (int i = 0; i < accelerMag.size(); i++) {
                                 float number = accelerMag.get(i);
-                                if(number > max){
+                                if (number > max) {
                                     max = number;
                                     index = i;
                                 }
                             }
                             // get the x and y direction
                             float maxX = accelerXdir.get(index);
+
                             float maxY = accelerYdir.get(index);
-                            double x_y_degree = Math.toDegrees(Math.atan2(maxY, maxX)); // not sure if we need it
 
-                            if(Math.abs(maxX) < 0.25){
-                                maxX = 0;
+                            float xSum = 0;
+                            float ySum = 0;
+
+                            for (int i = 0; i < accelerXdir.size(); i++) {
+                                xSum += accelerXdir.get(i);
+                                ySum += accelerYdir.get(i);
                             }
-                            if(Math.abs(maxY) < 0.25){
-                                maxY = 0;
-                            }
 
-                            Log.d(TAG, String.valueOf(maxX) + "," + String.valueOf(maxY));
-                            Integer maxXint = Math.round(Math.signum(maxX));
-                            Integer maxYint = Math.round(Math.signum(maxY));
+                            Log.d(TAG,"MAX_X:"+ String.valueOf(xSum) + " MAX_Y:" + String.valueOf(ySum));
+                            Integer maxXint = Math.round(Math.signum(xSum));
+                            Integer maxYint = Math.round(Math.signum(ySum));
 
-                            Log.d(TAG,"Magnitude: " + String.valueOf(max)+ " X sign: " + String.valueOf(maxXint) + " Y sign: " + String.valueOf(maxYint)+" Xdir: " + String.valueOf(currentXdirection) + " Ydir: " + String.valueOf(currentYdirection));
-                            if(max > 0.5 && currentXdirection.intValue() == maxXint.intValue() && currentYdirection.intValue() == maxYint.intValue()){
-//                                Log.d(TAG,"X sign: " + String.valueOf(maxXint) + " Y sign: " + String.valueOf(maxYint)+" Xdir: " + String.valueOf(currentXdirection) + " Ydir: " + String.valueOf(currentYdirection));
-                                Log.d(TAG, "Conditions met!!");
+
+
+
+
+
+//                            double x_y_degree = Math.toDegrees(Math.atan2(maxY, maxX)); // not sure if we need it
+
+
+
+
+//                        Log.d(TAG, String.valueOf(maxX) + "," + String.valueOf(maxY));
+//
+//                        if (Math.abs((float) maxX / maxY) > 3) {
+//                            maxY = 0;
+//                        }
+//                        if (Math.abs((float) maxY / maxX) > 3) {
+//                            maxX = 0;
+//                        }
+//
+//                        Log.d(TAG, String.valueOf(maxX) + "," + String.valueOf(maxY));
+//                        Integer maxXint = Math.round(Math.signum(maxX));
+//                        Integer maxYint = Math.round(Math.signum(maxY));
+//
+//                        Log.d(TAG, "Array size:" + String.valueOf(accelerMag.size()));
+//                        Log.d(TAG, "Count: " + String.valueOf(add_counter));
+
+                        accelerMag.clear();
+                        add_counter = 0;
+
+
+                        Log.d(TAG, "Magnitude: " + String.valueOf(max) + " X sign: " + String.valueOf(maxXint) + " Y sign: " + String.valueOf(maxYint) + " Xdir: " + String.valueOf(currentXdirection) + " Ydir: " + String.valueOf(currentYdirection));
+                        if ((currentXdirection.intValue() == maxXint.intValue() || currentYdirection.intValue() == maxYint.intValue())) {
+//                            if (currentXdirection.intValue() == maxXint.intValue() && currentYdirection.intValue() == maxYint.intValue()) {
+                            Log.d(TAG, "Conditions met!!");
 //                                astroImage.setVisibility(View.VISIBLE);
-                                astroImage.startAnimation(return_anim);
-                                score += 1;
+                            astroImage.startAnimation(return_anim);
+                            score += 1;
+
+
+                            if (score == 4) {
+
+                                currentLevel += 1;
+                                score = 0;
                                 scoreText.setText(SCORE + String.valueOf(score));
+                                levelText.setText(LEVEL + " : " + String.valueOf(currentLevel));
 
-
-//                                if(score == 4){
-//                                    level +=1;
-//                                }
-
-                                CharSequence text = "Hold off and then on, one of your thumbs to take picture!";
-                                Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
-                                toast.show();
-
-                                accelerMag.clear();
-
+                            } else {
+                                scoreText.setText(SCORE + String.valueOf(score));
                             }
-                            else{
 
-                                openAlert();
-                            }
+                            CharSequence text = "Hold off and then on, one of your thumbs to take picture!";
+                            Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
+                            toast.show();
+
+
+                        } else {
+
+                            openAlert();
+                        }
                         }
 
-                        stoptimertask();
-                    }
-                });
+                    stoptimertask();
+                }
+            });
                 Log.d("MOVE TIMER", "STOPPED");
             }
         }, 2000, 10000);
@@ -471,6 +533,11 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
     @Override
     public void onSensorChanged(SensorEvent event) {
 
+    if (button_left == true && button_right == true){
+       // Log.d("BOOLEAN_TIMER", "BOLEAN TIMER TRUE");
+
+        //waitTimer();
+
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
             mGravity = event.values;
 
@@ -481,7 +548,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
             mAcceleration = event.values;
 
         if(mAcceleration != null){
-            mAcceleration = lpfAccelSmoothing.addSamples(mAcceleration);
+//            mAcceleration = lpfAccelSmoothing.addSamples(mAcceleration);
             float accelerX = mAcceleration[0];
             float accelerY = mAcceleration[1];
 
@@ -489,7 +556,10 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
             accelerYdir.add(accelerY);
 
             float mag = (float) Math.sqrt(accelerX * accelerX + accelerY * accelerY);
+//            Log.d(TAG,"Magnitude: " + String.valueOf(mag));
             accelerMag.add(mag);
+            add_counter++;
+
 
         }
 
@@ -503,7 +573,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
                 azimut = orientation[1];
                 if (azimut >= 0.2 || azimut <= -0.2){
 //                    vibrator.vibrate(500);
-                    Log.d("AZIMUT DETECTED", String.valueOf(azimut));
+//                    Log.d("AZIMUT DETECTED", String.valueOf(azimut));
                 }
 
 //                roll = orientation[0];
@@ -523,6 +593,8 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
             }
         }
         mCustomDrawableView.invalidate();
+    }
+        //Log.d("BOOLEAN_TIMER", String.valueOf(boolean_timer));
     }
 
     @Override
@@ -551,7 +623,7 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
                     @Override
                     public void onClick(DialogInterface dialogInterface,
                                         int i) {
-                        Intent intent = new Intent(getApplicationContext(), FindingAstroMain.class);
+                        Intent intent = new Intent(getApplicationContext(), skyview_activity.class);
                         startActivity(intent);
                     }
                 });
@@ -564,4 +636,38 @@ public class skyview_activity extends AppCompatActivity implements SensorEventLi
         mDialog.show();
 
     }
+
+    public long sum(float[] array) {
+        long sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+
+    /*public void waitTimer(){
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+
+                        //TODO: Do something
+                        boolean_timer = true;
+                        Log.d("WAIT TIMER", "STARTED");
+                        Log.d("BOOLEAN_TIMER", String.valueOf(boolean_timer));
+
+
+                        stoptimertask();
+                        startTimer_moveTime();
+
+                    }
+                });
+               // Log.d("MOVE TIMER", "STOPPED");
+            }
+        }, 2000, 10000);
+    }*/
 }
