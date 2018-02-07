@@ -48,5 +48,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Avaa puhelimessa"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Kirjaudu sisään"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Kirjaudu Google-tilille"</string>
+    <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Tyhjennä haku."</string>
+    <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Haku"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

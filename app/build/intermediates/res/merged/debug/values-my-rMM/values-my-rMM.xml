@@ -48,5 +48,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"ဖုန်းပေါ်မှာ ဖွင့်ပါ"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"လက်မှတ်ထိုး ဝင်ရန်"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Google ဖြင့် လက်မှတ်ထိုးဝင်ရေ"</string>
+    <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"ရှာဖွေမှုကို ရှင်းပါ"</string>
+    <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"ရှာဖွေရန်"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"၉၉၉+"</string>
 </resources>

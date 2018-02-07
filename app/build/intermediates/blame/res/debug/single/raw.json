@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/raw/findingastro_background.ogg",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/raw/findingastro_background.ogg"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/raw/rewind.ogg",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/raw/rewind.ogg"
     },

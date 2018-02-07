@@ -48,5 +48,7 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Buksan sa telepono"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Mag-sign in"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Mag-sign in sa Google"</string>
+    <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"I-clear ang paghahanap"</string>
+    <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Maghanap"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

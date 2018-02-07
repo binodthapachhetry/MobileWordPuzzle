@@ -4,6 +4,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/tut_two.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/tut_two.png"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_tab_indicator_material.xml"
     },
@@ -32,6 +36,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/sand.png"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/down_left_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/down_left_arrow.png"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_text_light.xml"
     },
@@ -42,6 +50,10 @@
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/right_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/right_arrow.png"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/xando_background.xml",
@@ -68,12 +80,20 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_light.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/image_round.xml",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/image_round.xml"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/left_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/left_arrow.png"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/mikeoff.png",
@@ -86,6 +106,10 @@
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/tut_three.jpeg",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/tut_three.jpeg"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -136,6 +160,10 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/tile_green.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/up_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/up_arrow.png"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/tictactoe6_menu_background.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/tictactoe6_menu_background.xml"
     },
@@ -152,12 +180,32 @@
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/down_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/down_arrow.png"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/down_right_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/down_right_arrow.png"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/up_left_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/up_left_arrow.png"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_radio_material.xml"
     },
     {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/tut_one.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/tut_one.png"
+    },
+    {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/tile_purple.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/tile_purple.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/up_right_arrow.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/up_right_arrow.png"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
@@ -214,6 +262,10 @@
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/menu_background.xml",
         "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/menu_background.xml"
+    },
+    {
+        "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/sky_view.png",
+        "source": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/src/main/res/drawable/sky_view.png"
     },
     {
         "merged": "/Users/jarvis/AndroidStudioProjects/NUMAD16S-BinodThapaChhetry/app/build/intermediates/res/merged/debug/drawable/scraggle_tile.xml",

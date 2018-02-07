@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/menu_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/tictactoe6_elevation_high"
+    android:orientation="vertical"
+    android:padding="@dimen/menu_padding"
+    tools:context="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroDescription">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/finding_astro_text_size"
+            android:text="@string/title_activity_finding_astro_description"
+            android:textColor="@color/tictactoe6_purple_color"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/finding_astro_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/finding_astro_description_size"
+            android:text="@string/finding_astro_description"
+            android:textColor="@color/tictactoe6_purple_color"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/finding_astro_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_margin="@dimen/dictionary_button_margin"
+            android:text="@string/finding_astro_get_in"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

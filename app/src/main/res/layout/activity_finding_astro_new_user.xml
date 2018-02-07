@@ -1,0 +1,89 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/menu_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/tictactoe6_elevation_high"
+    android:orientation="vertical"
+    android:padding="@dimen/menu_padding"
+    tools:context="edu.neu.madcourse.binodthapachhetry.FindingAstro.FindingAstroNewUser">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/finding_astro_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/communication_text_size"
+            android:textColor="@color/tictactoe6_purple_color"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tictactoe6_menu_space"
+        android:text="@string/communication_first_time_user_label"
+        android:layout_gravity="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="@dimen/communication_text_size"/>
+
+
+    <EditText
+        android:id="@+id/finding_astro_newusertextBox"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/communication_new_user_hint"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:inputType="text"
+        android:layout_weight="1">
+    </EditText>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/finding_astro_new_user_button_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_margin="@dimen/dictionary_button_margin"
+            android:text="@string/communication_new_user_button"
+            android:layout_weight="2"/>
+
+        <Button
+            android:id="@+id/finding_astro_enter_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_margin="@dimen/dictionary_button_margin"
+            android:text="@string/twoplayergame_enter_game_button"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8">
+        <TextView
+            android:id="@+id/communication_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+

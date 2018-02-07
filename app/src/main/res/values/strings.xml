@@ -126,6 +126,7 @@ both sides in the larger game.\n\
     <string name="communication_registered_user_hint">Type username</string>
     <string name="communication_first_time_user_label"> First time player?</string>
     <string name="communication_registered_user_button"> Find opponent </string>
+    <string name="communication_single_player_button"> Play Single Player </string>
     <string name="communication_new_user_button"> Register </string>
     <string name="communication_enter_game"> Enter Game </string>
 
@@ -147,5 +148,63 @@ both sides in the larger game.\n\
     <string name="twoplayergame_enter_game_button">Go Back to enter As a Registered User</string>
     <string name="title_activity_two_player_game_returning_user">TwoPlayerGameReturningUser</string>
 
+
+    <string name="trickiest_part_label">Trickiest Part</string>
+    <string name="title_activity_finding_astro_main">FindingAstroMain</string>
+    <string name="finding_astro_label">Finding Astro</string>
+    <string name="finding_astro_accel_label">Accelerometer</string>
+    <string name="finding_astro_rotation_label">Rotation</string>
+    <string name="finding_astro_proximity_label">Proximity</string>
+    <string name="title_activity_finding_astro_skyview">FindingAstroSkyView</string>
+    <string name="title_activity_finding_astro_accelerometer">FindingAstroAccelerometer</string>
+    <string name="title_activity_finding_astro_rotation_vector">FindingAstroRotationVector</string>
+    <string name="title_activity_proximity">Proximity</string>
+    <string name="title_activity_rotation_vector">RotationVector</string>
+    <string name="finding_astro_skyview_label">Ready to play game</string>
+    <string name="finding_astro_rules_label">Rules</string>
+    <string name="title_activity_rules">Rules</string>
+    <string name="finding_astro_rules">\
+
+        Sky view:
+        \n\
+        1. Hold both the circles with your thumbs to launch the astronaut
+        \n\
+        2. Release your thumb with either of the circles to start a new move/direction
+        \n\
+        \n\
+        Accelerometer:
+        \n\
+        Displays the magnitude and direction (in angles) of the current device movement
+        \n\
+        \n\
+        Rotation:
+        \n\
+        Detects the current rotation vector of the device and vibrates if device is tilted (does not fall under expected orientation)
+        \n\
+
+
+    \n\
+    </string>
+
+    <string name="failed_move">Need to work on your movement speed or direction! Do you want to restart the game ?</string>
+    <string name="restart_game">Restart game</string>
+    <string name="quit_game">Quit game</string>
+    <string name="check_rules">Check rules</string>
+
+    <string name="title_finding_astro_challenge">Challenge Page</string>
+    <string name="title_activity_finding_astro_ready">FindingAstroReady</string>
+    <string name="finding_astro_registered_user_label">Returning Player</string>
+    <string name="finding_astro_new_user_label">New Player</string>
+    <string name="title_activity_finding_astro_new_user">FindingAstroNewUser</string>
+    <string name="title_activity_finding_astro_registered_user">FindingAstroRegisteredUser</string>
+    <string name="rules">Astro is a NASA astronaut lost in outer space. NASA has sent you on a mission to find him wandering in outer space. Use your smartphone to track him. At each level you will have to spot astro a given number of times. Astro is erratic and can not stay at a place for long. Therefore, you have to be quick and swift</string>
+    <string name="rules_two">The image above shows your game screen. Astro is right at the center. When you start, he is going to disappear in any random direction. In order to start an dplay the game, make sure you hold both the buttons at the bottom (as shown in the image below).</string>
+    <string name="rules_three">Next, keep your hands stretched while holding the phone with both the hands. As soon as the astronaut moves, move your device in that direction keeping your hands stretched. An arrow on the top will tell you in which direction you have to move. The green and blue crosshairs will help you kep your phone stable (as shown in the image below)</string>
+<string name="rules_four">Keep holding the buttons until you find Astro. As soon as Astro appears on your screen, release either of the held buttons to confirm that you have found one. Right after that, hold both the buttons quickly to start the second move.\n\
+So get set GO!</string>
+    <string name="title_activity_finding_astro_description">FindingAstro Description</string>
+    <string name="finding_astro_description">Finding Astro is a smartphone-based “Exergame” (fitness exercising game) for youth and young children to engage them in short bursts of intense arm-based physical activities. Find an erratic astronaut called “Astro”, who is lost in outer space using your smartphone. Astro can be seen only on your smartphone when moved to the right spatial location. Move your phone in the direction of astronaut’s movements and capture his photograph on your smartphone screen. Capture a set of images of Astro and move to more intense levels. Challenge your friends for short bursts of exercises and see who is the leader. With Finding Astro -  Spot the astronaut, stretch your body, tone your muscles – All with a smartphone </string>
+    <string name="finding_astro_get_in">Let me in</string>
+    <string name="final_project_label">Final Project</string>
 
 </resources>
